@@ -1,0 +1,61 @@
+\babel@toc {bahasa}{}
+\contentsline {chapter}{ABSTRAK}{vii}{Doc-Start}
+\contentsline {chapter}{ABSTRACT}{ix}{Doc-Start}
+\contentsline {chapter}{KATA PENGANTAR}{xi}{chapter*.1}
+\contentsline {chapter}{DAFTAR ISI}{xiii}{chapter*.3}
+\contentsline {chapter}{DAFTAR TABEL}{xvii}{chapter*.4}
+\contentsline {chapter}{DAFTAR GAMBAR}{xix}{chapter*.5}
+\contentsline {chapter}{DAFTAR KODE SUMBER}{xxi}{chapter*.6}
+\contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Rumusan Masalah}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Batasan Masalah}{2}{section.1.3}
+\contentsline {section}{\numberline {1.4}Tujuan}{2}{section.1.4}
+\contentsline {section}{\numberline {1.5}Manfaat}{3}{section.1.5}
+\contentsline {section}{\numberline {1.6}Metodologi}{3}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Penyusunan Proposal Tugas Akhir}{3}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Studi Literatur}{3}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {1.6.3}Analisis dan Desain Perangkat Lunak}{4}{subsection.1.6.3}
+\contentsline {subsection}{\numberline {1.6.4}Implementasi Perangkat Lunak}{4}{subsection.1.6.4}
+\contentsline {subsection}{\numberline {1.6.5}Pengujian dan Evaluasi}{4}{subsection.1.6.5}
+\contentsline {subsection}{\numberline {1.6.6}Penyusunan Buku Tugas Akhir}{4}{subsection.1.6.6}
+\contentsline {section}{\numberline {1.7}Sistematika Penulisan}{4}{section.1.7}
+\contentsline {chapter}{\numberline {II}TINJAUAN PUSTAKA}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Python}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Flask}{7}{section.2.2}
+\contentsline {section}{\numberline {2.3}Gitpython}{8}{section.2.3}
+\contentsline {section}{\numberline {2.4}Python Watchdog}{8}{section.2.4}
+\contentsline {section}{\numberline {2.5}TFTP}{8}{section.2.5}
+\contentsline {section}{\numberline {2.6}FTP}{9}{section.2.6}
+\contentsline {chapter}{\numberline {III}DESAIN DAN PERANCANGAN}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Kasus Penggunaan}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Arsitektur Sistem}{12}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Desain Umum Sistem}{12}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Perancangan Repositori Perangkat }{14}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Perancangan \textit {Middleware}}{15}{subsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.3.1}Perancangan \textit {Repository Observer}}{16}{subsubsection.3.2.3.1}
+\contentsline {subsubsection}{\numberline {3.2.3.2}Perancangan Web \textit {Service}}{16}{subsubsection.3.2.3.2}
+\contentsline {chapter}{\numberline {IV}IMPLEMENTASI}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Lingkungan Implementasi}{17}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Perangkat Keras}{17}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Perangkat Lunak}{17}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Implementasi Repositori Perangkat}{17}{section.4.2}
+\contentsline {section}{\numberline {4.3}Implementasi \textit {Middleware}}{20}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Implementasi \textit {Repository Observer}}{20}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Implementasi \textit {Web Service}}{21}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {V}PENGUJIAN DAN EVALUASI}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Lingkungan Uji Coba}{23}{section.5.1}
+\contentsline {section}{\numberline {5.2}Skenario Uji Coba}{23}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Skenario Uji Coba Fungsionalitas}{23}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Skenario Uji Coba Performa}{23}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Hasil Uji Coba dan Evaluasi}{23}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Uji Fungsionalitas}{23}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Hasil Uji Performa}{23}{subsection.5.3.2}
+\contentsline {chapter}{\numberline {VI}PENUTUP}{25}{chapter.6}
+\contentsline {section}{\numberline {6.1}Kesimpulan}{25}{section.6.1}
+\contentsline {section}{\numberline {6.2}Saran}{25}{section.6.2}
+\contentsline {chapter}{DAFTAR PUSTAKA}{27}{chapter*.10}
+\contentsline {chapter}{\numberline {A}INSTALASI PERANGKAT LUNAK}{29}{appendix.A}
+\contentsline {chapter}{\numberline {B}KODE SUMBER}{31}{appendix.B}
+\contentsline {chapter}{DAFTAR PUSTAKA}{33}{appendix*.11}
+\contentsline {chapter}{BIODATA PENULIS}{35}{appendix*.12}

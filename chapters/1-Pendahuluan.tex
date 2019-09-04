@@ -1,0 +1,75 @@
+\chapter{PENDAHULUAN}
+	Pada bab ini akan dipaparkan mengenai garis besar Tugas Akhir yang meliputi latar belakang, tujuan, rumusan dan batasan permasalahan, metodologi pembuatan Tugas Akhir dan sistematika penulisan.
+        
+	\section{Latar Belakang}
+		Di dalam suatu instansi, arsitektur jaringan merupakan bagian yang sangat penting untuk menunjang kinerja dari instansi tersebut. Semakin besar suatu instansi maka arsitektur jaringan disana juga semakin kompleks. Oleh karena itu diperlukan suatu sistem yang mampu mengatur seluruh perangkat jaringan dengan mudah, sehingga administrator jaringan dapat bekerja secara maksimal.\\
+        \indent Saat ini beberapa perangkat jaringan sudah memiliki mekanisme penyimpanan konfigurasi. Namun belum meiliki mekanisme \textit{versioning} yang baik, sehingga kesulitan dalam melacak versi konfigurasi setelah melakukan banyak perubahan konfigurasi. Hal ini juga dialami oleh DPTSI ITS. Ketika administrator jaringan ingin melihat versi konfigurasi pada waktu tertentu maka akan kesulitan karena sulit untuk identifikasi versi perubahan yang ada.\\
+        \indent Dalam perkembangan teknologi saat ini banyak terdapat alat untuk \textit{file verioning} seperti Git, Subversion, dan Bazaar. Git merupakan file versioning yang umum digunakan oleh pengembang aplikasi\cite{versioning_popularity}. Selain itu dibandingkan \textit{file versioning} lain Git lebih cepat dalam proses penggunaannya\cite{git_fast}.\\
+	    \indent Pada tugas akhir ini akan dibuat sebuah sistem untuk mengatur versi file konfigurasi perangkat jaringan dalam bentuk aplikasi web  yang memanfaatkan Git sebagain \textit{file vesioning}. 
+
+
+	\section{Rumusan Masalah}
+       	Rumusan masalah yang diangkat dalam tugas akhir ini adalah sebagai berikut :
+		\begin{enumerate}
+			\item Bagaimana merancang \textit{versioning} penyimpanan konfigurasi perangkat jaringan berbasis git?
+			\item Bagaimana merancang \textit{middleware} protokol penyimpanan konfigurasi perangkat jaringan untuk \textit{versioning} penyimpanan konfigurasi secara transparan?
+            \item Bagaimana merancang sistem informasi \textit{backend} untuk administrator untuk pengelolaan versi konfigurasi?
+            \item Bagaimana mengimplementasi sistem \textit{versioning} untuk perangkat jaringan di DPTSI ITS.
+		\end{enumerate}
+
+	\section{Batasan Masalah}
+		Dari permasalahan yang telah diuraikan di atas, terdapat beberapa batasan masalah pada tugas akhir ini, yaitu:
+		\begin{enumerate}
+			\item Perangkat jaringan yang digunakan adalah \textit{router} dan \textit{switch}.
+            \item Perangkat jaringan merupakan produk dari Cisco, Huawei, dan Mikrotik.
+           
+		\end{enumerate}
+
+	\section{Tujuan}
+       	Tujuan pembuatan tugas akhir ini antara lain:
+        \begin{enumerate}
+        	\item Membuat mekanisme penyimpanan file konfigurasi perangkat jaringan \textit{router} dan \textit{switch}.
+        	\item Membuat \textit{middleware} untuk menjembatani penyimpana konfigurasi perangkat jaringan.
+        	\item Membuat mekanisme \textit{versioning} file konfigurasi perangkat jaringan yang disimpan.
+        \end{enumerate}
+        
+	\section{Manfaat}
+    	Manfaat dari pembuatan tugas akhir ini adalah mempermudah melacak versi konfigurasi perangkat jaringan.\\
+    	
+   	\section{Metodologi}
+   		Metodologi yang digunakan dalam pembuatan Tugas Akhir ini adalah sebagai berikut.
+   		
+   		\subsection{Penyusunan Proposal Tugas Akhir}
+   			Proposal tugas akhir ini berisi tentang deskripsi pendahuluan dari tugas akhir yang akan dibuat. Pendahuluan tugas akhir ini terdiri dari hal yang menjadi latar belakang diajukannya usulan tugas akhir, rumusan masalah yang diangkat, batasan masalah pada tugas akhir, tujuan dari pembuatan tugas akhir dan manfaat dari hasil pembuatan tugas akhir. Selain itu dijabarkan pula tinjauan pustaka yang digunakan sebagai referensi pendukung pembuatan tugas akhir. Sub bab metodologi berisi penjelasan mengenai tahapan penyusunan tugas akhir mulai dari penyusunan proposal hingga penyusunan buku tugas akhir. Terdapat pula sub bab jadwal kegiatan yang menjelaskan jadwal pengerjaan tugas akhir.
+   			
+ 		\subsection{Studi Literatur}
+ 			Pada tahap ini dilakukan pencarian informasi dan referensi mengenai Git dan Python Watchdog untuk mendukung dan memastikan setiap tahap pembuatan tugas akhir sesuai dengan prosedur yang berlaku serta dapat diimplementasikan. Sumber informasi dan referensi bisa didapatkan melalui buku, jurnal, dan internet.
+ 		\subsection{Analisis dan Desain Perangkat Lunak}
+ 			Pada tahap ini dilakukan analisis dan perancangan terhadap arsitektur tugas akhir yang akan dibuat. Tahap ini merupakan tahap yang paling penting dimana segala bentuk implementasi dapat berjalan dengan baik ketika arsitektur sistem juga baik. 
+ 		\subsection{Implementasi Perangkat Lunak}
+ 			Pada tahap ini dilakukan implementasi atau realisasi dari anilisis dan perancangan arsitektur sistem yang sudah dibuat sebelumnya, sehingga menjadi infrastruktur yang sesuai dengan apa yang direncanakan.
+ 		\subsection{Pengujian dan Evaluasi}
+ 			Pada tahap ini dilakukan pengujian untuk mengukur performa dari sistem penyimpanan konfigurasi perangkat jaringan menggunakan arsitektur sistem yang telah dibuat. Beberapa performa yang diukur antara lain, kecepatan protokol pengiriman dan ketepatan versi dengan perubahan yang ada. Setela dilakukan ujicoba, maka dilakukan evaluasi terhadap kinerja arsitektur sistem yang telah diimplementasikan dengan tujuan bisa diperbaiki jika ada pengembangan selanjutnya.
+ 		\subsection{Penyusunan Buku Tugas Akhir}
+ 			Pada tahap ini dilakukan penyusunan buku tugas akhir yang berisi dokumentasi yang mencakup teori, konsep, implementasi dan hasil pengerjaan tugas akhir.
+ 			
+ 	\section{Sistematika Penulisan}
+ 		Sistematika penulisan laporan tugas akhir secara garis besar adalah sebagai berikut :
+ 		\begin{enumerate}
+ 			\item Bab I. Pendahuluan \\
+ 				Bab ini berisi penjelasan mengenai latar belakang, rumusan masalah, batasan masalah, tujuan, manfaat, metodologi dan sistematika penulisan dari pembuatan tugas akhir.
+ 			\item Bab II. Tinjauan Pustaka \\
+ 				Bab ini berisi kajian teori atau penjelasan metode, algoritma, \textit{library} dan \textit{tools} yang digunakan dalam pembuatan tugas akhir ini. Kajian teori yang dimaksud berisi tentang penjelasan singkat mengenai \textit{Python}, \textit{Flask}, \textit{Gitpython} dan \textit{Python Watchdog}.
+ 			\item Bab III. Desain dan Perancangan \\
+ 				Bab ini berisi mengenai analisis dan perancangan arsitektur sistem yang akan diimplementasikan dalam pembuatan tugas akhir.
+ 			\item Bab IV. Implementasi \\
+ 				Bab ini berisi mengenai implementasi dari arsitektur sistem yang dibuat sebelumnya. Penjelasan berupa kode program dan pengaturan yang digunakan untuk implementasi arsitektur sistem.
+ 			\item Bab V. Pengujian dan Evaluasi \\
+ 				Bab ini berisi tentang tahapan ujicoba terhadap performa arsitektur sistem dan evaluasi terhadap sistem yang dibuat. 
+ 			\item Bab VI. Penutup \\
+ 				Bab ini merupakan bab terakhir yang memaparkan kesimpulan dari hasil pengujian dan evaluasi yang telah dilakukan. Pada bab ini juga terdapat saran yang ditujukan bagi pembaca yang berminat untuk melakukan pengembangan terhadap tugas akhir ini.
+ 			\item Daftar Pustaka \\
+ 				Bab ini berisi daftar pustaka yang dijadikan literatur dalam tugas akhir.
+ 			\item Lampiran \\
+ 				Dalam lampiran terdapat kode sumber program secara keseluruhan.
+ 		\end{enumerate}

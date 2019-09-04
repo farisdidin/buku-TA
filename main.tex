@@ -1,0 +1,64 @@
+\documentclass[12pt,oneside,reqno]{ta-its}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{amsmath,float}
+\usepackage{mdframed}
+\usepackage{wrapfig}
+\usepackage[]{algorithm2e}
+\makeatletter
+\renewcommand{\algorithmcfname}{Pseudocode}
+\makeatother
+\makeatletter
+\renewcommand{\@algocf@capt@plain}{bottom}% formerly {bottom}
+\makeatother
+
+\renewcommand{\lstlistingname}{Kode Sumber}
+\renewcommand{\lstlistlistingname}{DAFTAR KODE SUMBER}
+
+\input{chapters/0-A.tex}
+\begin{document}
+	\frontmatter % Halaman dengan penomoran romawi kecil
+	\maketitle
+	\legalityPaper % Lembar Pengesahan
+	
+    \input{chapters/0-Abstrak.tex}
+	\input{chapters/0-Kata_Pengantar.tex}
+
+	\cleardoublepage % Mengisi penanda halaman genap yang kosong
+
+	\tableofcontents % Daftar Isi
+	\listoftables % Daftar Tabel
+	\listoffigures % Daftar Gambar
+	\lstlistoflistings % Daftar Kode Sumber
+
+	\mainmatter
+	\input{chapters/1-Pendahuluan.tex}
+	\input{chapters/2-Tinjauan_Pustaka.tex}
+	\input{chapters/3-Desain_dan_Perancangan.tex}
+	\input{chapters/4-Implementasi.tex}
+	\input{chapters/5-Pengujian_dan_Evaluasi.tex}
+	\input{chapters/6-Penutup.tex}
+	
+	\bibliographystyle{IEEEtranID.bst}
+	\bibliography{Zotero}
+	
+    
+    \renewcommand\chaptername{LAMPIRAN}
+	\appendix
+    \input{chapters/7-Lampiran_A.tex}
+    \input{chapters/8-Lampiran_B.tex}
+
+	\appendix
+
+	\backmatter % Lampiran tanpa judul LAMPIRAN X, biasanya untuk BIODATA PENULIS
+\bibliography{main}
+	\chapter{BIODATA PENULIS}
+	\begin{wrapfigure}{l}{0.3\textwidth}
+		\includegraphics[width=3cm,height=4cm]{Images/fotoDiri.png}
+	\end{wrapfigure}
+	
+	\textbf{Muhammad Faris Didin Andiyar}, biasa lahir pada 23 April 1997 di Mojokerto. Penulis adalah mahasiswa yang sedang menjalani studi di Departemen Informatika Institut Teknologi Sepuluh Nopember. Selama menempuh studi penulis aktif di Organisasi sebagai Ketua Departemen Kaderisasi dan Pemetaan (KDPM) Himpunan Mahasiswa Teknik Computer-Informatika pada tahun ke-3.Pernah menjadi staff di kepanitiaan Schematics. Penulis juga merupakan administrator lab Arsitektur dan Jaringan Komputer (AJK) dan juga pernah menjadi asisten mata kuliah Sistem Operasi dan Jaringan Komputer.\\
+		
+\end{document}
+
+\end{document} % YAY, WELCOME TO REAL WORD :)

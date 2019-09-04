@@ -1,0 +1,19 @@
+\chapter{PENUTUP}
+    Bab ini membahas kesimpulan yang dapat diambil dari tujuan pembuatan sistem dan hubungannya dengan hasil uji coba dan evaluasi yang telah dilakukan. Selain itu, terdapat beberapa saran yang bisa dijadikan acuan untuk melakukan pengembangan dan penelitian lebih lanjut.
+        
+	\section{Kesimpulan}
+        Dari proses perencangan, implementasi dan pengujian terhadap sistem, dapat diambil beberapa kesimpulan berikut:
+		\begin{enumerate}
+            \item Sistem dapat melakukan manajemen alokasi \textit{virtual machine} pada lingkungan \textit{hypervisor} yang heterogen. \textit{Hypervisor} yang didukung oleh sistem adalah \textit{Vmware Vsphere} dan \textit{Proxmox}.
+            \item Sistem dapat membagi distribusi alokasi \textit{virtual machine} baru pada \textit{server} yang tersedia dengan algoritma \textit{Analytical Hierarchy Process}.
+            \item Sistem dapat melakukan \textit{Provisioning} sampai proses pengaturan IP berdasarkan \textit{hypervisor} dan sistem operasi.
+            \item Sistem dapat diakses oleh pengguna melalui \textit{interface} web dan \textit{command line interface}.
+            \item Dari hasil pengujian performa, semakin banyak \textit{worker} yang digunakan sangat rawan terjadinya kegagalan alokasi \textit{virtual machine} pada \textit{hypervisor} Proxmox.
+		\end{enumerate}
+        
+	\section{Saran}
+		Berikut beberapa saran yang diberikan untuk pengembangan lebih lanjut:
+		\begin{enumerate}
+			\item Untuk mempercepat waktu alokasi pada \textit{hypervisor} Proxmox, diperlukan \textit{storage area network} sebagai tempat menyimpan \textit{file template} sistem operasi sehingga saat alokasi \textit{virtual machine} baru, \textit{middleware} tidak perlu mengirimkan file \textit{template} terlebih dahulu.
+            \item Untuk memperbanyak dukungan terhadap sistem operasi, untuk pengaturan IP dapat dilakukan dengan mekanisme \textit{IP Floating}.
+		\end{enumerate}
