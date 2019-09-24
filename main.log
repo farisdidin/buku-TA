@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  5 SEP 2019 09:15
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  23 SEP 2019 20:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1572,10 +1572,7 @@ File: img/bismillah.png Graphic file (type bmp)
 
 ] (./chapters/1-Pendahuluan.tex
 BAB I.
-
-Underfull \vbox (badness 2913) has occurred while \output is active []
-
- [1
+[1
 
 ]
 
@@ -1584,11 +1581,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] [3] [4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5])
-(./chapters/2-Tinjauan_Pustaka.tex [6]
+[2] [3] [4] [5]) (./chapters/2-Tinjauan_Pustaka.tex [6]
 BAB II.
 [7
 
