@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  23 SEP 2019 20:44
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  3 NOV 2019 14:31
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1613,14 +1613,23 @@ File: Images/C-3/Middleware.png Graphic file (type bmp)
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
 (Font)              scaled to size 9.22495pt on input line 60.
 
-[15]) (./chapters/4-Implementasi.tex [16]
-BAB IV.
-[17
+[15]
+File: Images/C-3/AlurPengirimanFile.png Graphic file (type bmp)
+<Images/C-3/AlurPengirimanFile.png>
+File: Images/C-3/CreateBranch.png Graphic file (type bmp)
+<Images/C-3/CreateBranch.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16])
+(./chapters/4-Implementasi.tex [17] [18
 
 ]
+BAB IV.
+[19]
 LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 9.85492pt on input line 25.
- [18] [19]
+ [20] [21]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/n' will be
 (Font)              scaled to size 8.19995pt on input line 94.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
@@ -1628,7 +1637,7 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
 
 Underfull \vbox (badness 3690) has occurred while \output is active []
 
- [20]
+ [22]
 Overfull \hbox (4.92569pt too wide) in paragraph at lines 104--104
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
@@ -1663,35 +1672,35 @@ Overfull \hbox (3.11319pt too wide) in alignment at lines 111--118
  [] [] [] [] 
  []
 
-) (./chapters/5-Pengujian_dan_Evaluasi.tex [21] [22
+) (./chapters/5-Pengujian_dan_Evaluasi.tex [23] [24
 
 ]
 BAB V.
-) (./chapters/6-Penutup.tex [23] [24
+) (./chapters/6-Penutup.tex [25] [26
 
 ]
 BAB VI.
-[25]) (./main.bbl [26]) (./chapters/7-Lampiran_A.tex [27
+[27]) (./main.bbl [28]) (./chapters/7-Lampiran_A.tex [29
 
-] [28
+] [30
 
 ]
 Lampiran A.
-) (./chapters/8-Lampiran_B.tex [29] [30
+) (./chapters/8-Lampiran_B.tex [31] [32
 
 ]
 Lampiran B.
-) [31] [32
+) [33] [34
 
-] (./main.bbl) [33
+] (./main.bbl) [35
 
-] [34
+] [36
 
 ]
 File: Images/fotoDiri.png Graphic file (type bmp)
 <Images/fotoDiri.png>
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
- [35]
+ [37]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 62.
  (./main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 62.
@@ -1702,12 +1711,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 26145 strings out of 493007
- 475021 string characters out of 6136719
- 654997 words of memory out of 5000000
- 29755 multiletter control sequences out of 15000+600000
+ 26155 strings out of 493007
+ 475303 string characters out of 6136719
+ 655108 words of memory out of 5000000
+ 29763 multiletter control sequences out of 15000+600000
  534333 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  46i,12n,67p,10439b,1004s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (59 pages).
+Output written on main.pdf (61 pages).

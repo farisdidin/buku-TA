@@ -63,7 +63,21 @@
             \indent \textit{HTTP Rest API} dibangun menggunakan Flask yang sudah terintegrasi gitPython dan Python watchdog. Modul gitPython dan Python Watchdog digunakan untuk mengamati repositori perangkat jaringan.
             
         \subsubsection{Perancangan \textit{Repository Observer}}
-            Pada sistem ini Middleware harus bisa mengamati repositori perangkat jaringan secara berkelanjutan dan melakukan update pada history commit pada repositori. Untuk melakukan hal tersebut modul watchdog di dalam middleware yang akan melihat setiap perubahan pada respositori perangkat jaringan. Modul watchdog berjalan sebagai thread yang menunggu perubahan kondisi di dalam repositori. Ketika thread mengidentifikasi ada perubahan di dalam repositori maka thread akan menjalankan perintah commit menggunakan modul gitPython yang terintegrasi dengan middleware.  
+            Pada sistem ini Middleware harus bisa mengamati repositori perangkat jaringan secara berkelanjutan dan melakukan update pada history commit pada repositori. Untuk melakukan hal tersebut modul watchdog di dalam middleware yang akan melihat setiap perubahan pada respositori perangkat jaringan. Modul watchdog berjalan sebagai thread yang menunggu perubahan kondisi di dalam repositori. Ketika thread mengidentifikasi ada perubahan di dalam repositori maka thread akan menjalankan perintah commit menggunakan modul gitPython yang terintegrasi dengan middleware.
+            \begin{figure}[H]
+            	\centering
+            	\includegraphics[width=10cm,height=1cm]{Images/C-3/AlurPengirimanFile.png}
+            	\caption{Alur Pengiriman File}
+            	\label{desain:pengiriman file}
+            \end{figure}
+	        \indent Repository Observer juga mengatur pembentukan cabang dari repositori penyimpanan konfigurasi perangkat jaringan. Alur pembuatan cabang dari repositori seperti pada gambar \ref{CreateBranch}.
+	        \begin{figure}[H]
+	        	\centering
+	        	\includegraphics[width=\textwidth]{Images/C-3/CreateBranch.png}
+	        	\caption{Alur Pembuatan Branch}
+	        	\label{CreateBranch}
+	        \end{figure}
+        
         
         \subsubsection{Perancangan Web \textit{Service}}
         	Dalam sistem yang dibangun, web service digunakan untuk menerjemahkan permintaan dari adiministrator jaringan. Web service memiliki antarmuka dan rute dengan parameter nama repositori dan permintaan fitur yang diinginkan. Setiap rute akan diproses oleh \textit{Middleware} dan kemudian mengirimkan respon kepada administrator.

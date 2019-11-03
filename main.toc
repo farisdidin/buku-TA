@@ -34,28 +34,28 @@
 \contentsline {subsection}{\numberline {3.2.2}Perancangan Repositori Perangkat }{14}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Perancangan \textit {Middleware}}{15}{subsection.3.2.3}
 \contentsline {subsubsection}{\numberline {3.2.3.1}Perancangan \textit {Repository Observer}}{16}{subsubsection.3.2.3.1}
-\contentsline {subsubsection}{\numberline {3.2.3.2}Perancangan Web \textit {Service}}{16}{subsubsection.3.2.3.2}
-\contentsline {chapter}{\numberline {IV}IMPLEMENTASI}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Lingkungan Implementasi}{17}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Perangkat Keras}{17}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Perangkat Lunak}{17}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Implementasi Repositori Perangkat}{17}{section.4.2}
-\contentsline {section}{\numberline {4.3}Implementasi \textit {Middleware}}{20}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Implementasi \textit {Repository Observer}}{20}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Implementasi \textit {Web Service}}{21}{subsection.4.3.2}
-\contentsline {chapter}{\numberline {V}PENGUJIAN DAN EVALUASI}{23}{chapter.5}
-\contentsline {section}{\numberline {5.1}Lingkungan Uji Coba}{23}{section.5.1}
-\contentsline {section}{\numberline {5.2}Skenario Uji Coba}{23}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Skenario Uji Coba Fungsionalitas}{23}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Skenario Uji Coba Performa}{23}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Hasil Uji Coba dan Evaluasi}{23}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Uji Fungsionalitas}{23}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Hasil Uji Performa}{23}{subsection.5.3.2}
-\contentsline {chapter}{\numberline {VI}PENUTUP}{25}{chapter.6}
-\contentsline {section}{\numberline {6.1}Kesimpulan}{25}{section.6.1}
-\contentsline {section}{\numberline {6.2}Saran}{25}{section.6.2}
-\contentsline {chapter}{DAFTAR PUSTAKA}{27}{chapter*.10}
-\contentsline {chapter}{\numberline {A}INSTALASI PERANGKAT LUNAK}{29}{appendix.A}
-\contentsline {chapter}{\numberline {B}KODE SUMBER}{31}{appendix.B}
-\contentsline {chapter}{DAFTAR PUSTAKA}{33}{appendix*.11}
-\contentsline {chapter}{BIODATA PENULIS}{35}{appendix*.12}
+\contentsline {subsubsection}{\numberline {3.2.3.2}Perancangan Web \textit {Service}}{17}{subsubsection.3.2.3.2}
+\contentsline {chapter}{\numberline {IV}IMPLEMENTASI}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Lingkungan Implementasi}{19}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Perangkat Keras}{19}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Perangkat Lunak}{19}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Implementasi Repositori Perangkat}{19}{section.4.2}
+\contentsline {section}{\numberline {4.3}Implementasi \textit {Middleware}}{22}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Implementasi \textit {Repository Observer}}{22}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Implementasi \textit {Web Service}}{23}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {V}PENGUJIAN DAN EVALUASI}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1}Lingkungan Uji Coba}{25}{section.5.1}
+\contentsline {section}{\numberline {5.2}Skenario Uji Coba}{25}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Skenario Uji Coba Fungsionalitas}{25}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Skenario Uji Coba Performa}{25}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Hasil Uji Coba dan Evaluasi}{25}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Uji Fungsionalitas}{25}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Hasil Uji Performa}{25}{subsection.5.3.2}
+\contentsline {chapter}{\numberline {VI}PENUTUP}{27}{chapter.6}
+\contentsline {section}{\numberline {6.1}Kesimpulan}{27}{section.6.1}
+\contentsline {section}{\numberline {6.2}Saran}{27}{section.6.2}
+\contentsline {chapter}{DAFTAR PUSTAKA}{29}{chapter*.12}
+\contentsline {chapter}{\numberline {A}INSTALASI PERANGKAT LUNAK}{31}{appendix.A}
+\contentsline {chapter}{\numberline {B}KODE SUMBER}{33}{appendix.B}
+\contentsline {chapter}{DAFTAR PUSTAKA}{35}{appendix*.13}
+\contentsline {chapter}{BIODATA PENULIS}{37}{appendix*.14}
