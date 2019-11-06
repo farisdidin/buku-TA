@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  3 NOV 2019 14:31
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  6 NOV 2019 18:19
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1592,41 +1592,46 @@ BAB III.
 File: Images/C-3/UC.png Graphic file (type bmp)
 <Images/C-3/UC.png>
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 9.22495pt on input line 9.
+(Font)              scaled to size 9.22495pt on input line 16.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/n' will be
-(Font)              scaled to size 9.22495pt on input line 9.
-[11]
-File: Images/C-3/DesainUmumTA.png Graphic file (type bmp)
-<Images/C-3/DesainUmumTA.png>
- [12]
+(Font)              scaled to size 9.22495pt on input line 16.
+
+Underfull \vbox (badness 1389) has occurred while \output is active []
+
+ [11]
+[12]
+File: Images/C-3/Desain-Umum-TA-2.png Graphic file (type bmp)
+<Images/C-3/Desain-Umum-TA-2.png>
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
+[14]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/it' will be
-(Font)              scaled to size 11.27493pt on input line 54.
-
-Underfull \vbox (badness 7944) has occurred while \output is active []
-
- [14]
+(Font)              scaled to size 11.27493pt on input line 65.
 File: Images/C-3/Middleware.png Graphic file (type bmp)
 <Images/C-3/Middleware.png>
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 9.22495pt on input line 60.
+(Font)              scaled to size 9.22495pt on input line 71.
 
-[15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
 File: Images/C-3/AlurPengirimanFile.png Graphic file (type bmp)
 <Images/C-3/AlurPengirimanFile.png>
+
+[16]
 File: Images/C-3/CreateBranch.png Graphic file (type bmp)
 <Images/C-3/CreateBranch.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16])
-(./chapters/4-Implementasi.tex [17] [18
+ [17])
+(./chapters/4-Implementasi.tex [18]
+BAB IV.
+[19
 
 ]
-BAB IV.
-[19]
 LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 9.85492pt on input line 25.
  [20] [21]
@@ -1712,7 +1717,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  26155 strings out of 493007
- 475303 string characters out of 6136719
+ 475319 string characters out of 6136719
  655108 words of memory out of 5000000
  29763 multiletter control sequences out of 15000+600000
  534333 words of font info for 71 fonts, out of 8000000 for 9000

@@ -1,5 +1,12 @@
 \chapter{DESAIN DAN PERANCANGAN}
     Pada bab ini dibahas mengenai analisis dan perancangan sistem.
+    
+    \section{Deskrisi Umum Sistem}
+    	Sistem yang akan dibuat dalam tugas akhir ini adalah sistem yang digunakan untuk melacak perubahan konfigurasi perangkat jaringan. Sistem terhubung dengan perangkat jaringan dan menyimpan semua versi perubahan dari file konfigurasi perangkat jaringan.\\
+    	
+    	\indent Sistem memiliki server repositori untuk menyimpan file konfigurasi dari perangkat jaringan yang dikirim melalui protokol TFTP dan FTP menyesuaikan protokol yang didukung oleh perangkat jaringan. Di dalam sistem terdapat \textit{Repository Observer} yang berfungsi untuk melihat perubahan di dalam repositori. Ketika ada perubahan, sistem otomatis melakukan commit terhadap Git untuk mencatat perubahan dari file.\\
+    	
+    	\indent Di dalam sistem terdapat dua \textit{web service} yang digunakan yaitu Gitea dan Flask. Web service tersebut digunakan untuk menerjemahkan instruksi dari administrator kepada sistem sesuai dengan diagram penggunaan pada Gambar \ref{usecase}. 
 	
     \section{Kasus Penggunaan}
     	Dalam sistem ini hanya ada satu aktor yaitu \textit{administrator} jaringan yang akan mengatur penyimpanan konfigurasi. Diagram kasus penggunaan digambarkan pada Gambar \ref{usecase}.
@@ -35,18 +42,22 @@
 		    \end{longtable}
 
 	\section{Arsitektur Sistem}
-		Pada sub-bab ini, dibahas mengenai tahap analisis dan kebutuhan bisnis dan desain dari sistem yang akan dibangun.
+		Pada sub-bab ini, dibahas mengenai tahap analisis dan kebutuhan bisnis dan desain dari sistem yang akan dibangun. Arsitektur sistem secara umum ditunjukkan pada Gambar \ref{DesainUmumSistem}.\\
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\textwidth]{Images/C-3/Desain-Umum-TA-2.png}
+			\caption{Desain Umum Sistem}
+			\label{DesainUmumSistem}
+		\end{figure}
 
 		\subsection{Desain Umum Sistem}
-			Sistem yang dibuat dalam tugas akhir ini adalah sistem yang dapat mengatur penyimpanan konfigurasi perangkat jaringan. Sistem yang dikembangkan mendukung metode pengiriman konfigurasi TFTP dan FTP. Ketika perangkat jaringan mengirim konfigurasi maka sistem akan secara otomatis melakukan commit pada repositori perangkat jaringan.\\
-			\indent Dalam sistem ini akan terdapat thread yang berfungsi untuk mengawasi setiap perubahan yang terjadi pada repositori perangkat jaringan. Setiap ada perubahan pada repositori maka thread langsung melakukan update commit pada repositori.\\
-			\indent Sistem ini akan digunakan oleh administrator jaringan yang mana bisa meminta URI repositori, membuat repositori, melihat riwayat commit pada repositori, dan melakukan checkout ke commit yang diinginkan. Penjelasan secara umum arsitektur sistem akan diuraikan pada Gambar \ref{DesainUmumSistem}.\\
-                \begin{figure}[H]
-                    \centering
-                    \includegraphics[width=8cm,height=9cm]{Images/C-3/DesainUmumTA.png}
-                    \caption{Desain Umum Sistem}
-                    \label{DesainUmumSistem}
-                \end{figure}
+			Berdasarkan yang dijelaskan pada deskripsi umum sistem, dapat diperoleh kebutuhan sistem sebagai berikut:
+			\begin{enumerate}
+				\item \textit{Repository Server} untuk menyimpan file konfigurasi dari perangkat jaringan.
+				\item \textit{Repository Observer} untuk melihat perubahan file yang disimpan di dalam repository server.
+				\item \textit{Web Service} untuk menerjemahkan intruksi dari admin kepada sistem.
+			\end{enumerate}
+                
                 
 		\subsection{Perancangan Repositori Perangkat }
 			Repositori perangkat adalah komponen untuk menyimpan file konfigurasi perangkat jaringan. Repositori perangkat merupakan direktori yang menjadi tujuan pegiriman file konfigurasi perangkat jaringan. Pengiriman file konfigurasi menggunakan TFTP dan FTP. Di dalam repositori perangkat, direktori akan dibedakan berdasarkan protokol pengiriman dan nama perangkat.\\ 
