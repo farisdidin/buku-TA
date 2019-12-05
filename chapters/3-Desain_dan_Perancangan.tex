@@ -2,7 +2,7 @@
     Pada bab ini dibahas mengenai analisis dan perancangan sistem.
     
     \section{Deskrisi Umum Sistem}
-    	Sistem yang akan dibuat dalam tugas akhir ini adalah sistem yang digunakan untuk melacak perubahan konfigurasi perangkat jaringan. Sistem terhubung dengan perangkat jaringan dan menyimpan semua versi perubahan dari file konfigurasi perangkat jaringan.\\
+    	Sistem yang akan dibuat dalam tugas akhir ini adalah sistem yang digunakan untuk melacak perubahan konfigurasi perangkat jaringan. Sistem terhubung dengan perangkat jaringan dan menyimpan semua versi perubahan dari file konfigurasi perangkat jaringan. Sistem bisa mengatur versi konfigurasi yang dibutuhkan oleh perangkat jaringan untuk dipasang pada perangkat jaringan.\\
     	
     	\indent Sistem memiliki server repositori untuk menyimpan file konfigurasi dari perangkat jaringan yang dikirim melalui protokol TFTP dan FTP menyesuaikan protokol yang didukung oleh perangkat jaringan. Di dalam sistem terdapat \textit{Repository Observer} yang berfungsi untuk melihat perubahan di dalam repositori. Ketika ada perubahan, sistem otomatis melakukan commit terhadap Git untuk mencatat perubahan dari file.\\
     	
@@ -38,7 +38,7 @@
 		    	UC-0002 & Membuat Direktori Penyimpanan.  & \textit{Administrator} dapat membuat direktori untuk menyimpan konfigurasi dari perangkat jaringan.\\ \hline
 		    	UC-0003 & Melihat Commit. & \textit{Administrator} dapat melihat riwayat commit dalam repositori perangkat. \\ \hline
 		    	UC-0004 & Checkout Commit. & Administrator dapat berpindah commit (checkout) sesuai dengan versi commit yang diinginkan. \\ \hline
-		    	
+				UC-0005 & Diff Commit. & Administrator dapat melihat perbedaan antara commit satu dengan lainnya. \\ \hline		    	
 		    \end{longtable}
 
 	\section{Arsitektur Sistem}
@@ -60,20 +60,17 @@
                 
                 
 		\subsection{Perancangan Repositori Perangkat }
-			Repositori perangkat adalah komponen untuk menyimpan file konfigurasi perangkat jaringan. Repositori perangkat merupakan direktori yang menjadi tujuan pegiriman file konfigurasi perangkat jaringan. Pengiriman file konfigurasi menggunakan TFTP dan FTP. Di dalam repositori perangkat, direktori akan dibedakan berdasarkan protokol pengiriman dan nama perangkat.\\ 
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=\textwidth]{Images/C-3/Repository.png}
+				\caption{Desain Repositori Perangkat}
+				\label{DesainRepositoriPerangkat}
+			\end{figure}
+			Repositori perangkat adalah komponen untuk menyimpan file konfigurasi perangkat jaringan. Repositori perangkat merupakan direktori yang menjadi tujuan pegiriman file konfigurasi perangkat jaringan. Pengiriman file konfigurasi menggunakan TFTP dan FTP. Di dalam repositori perangkat, direktori akan dibedakan berdasarkan protokol pengiriman dan nama perangkat. Setiap perangkat memiliki direktori masing-masing dan setiap direktori merupakan \textit{Git Repository}.\\ 
 
-		\subsection{Perancangan \textit{Middleware}}
-        	\textit{Middleware} digunakan untuk menjalankan fungsi dari manajemen konfigurasi yang dijalankan \textit{Administrator}. Middleware juga berfungsi untuk mengatur riwayat konfigurasi pada repositori perangkat. Middleware terdiri dari berbagai layanan yaitu, HTTP Rest API, \textit{Repository Observer}, basis data, dan Git. Arsitektur \textit{Middleware} dapat dilihat pada Gambar \ref{desain:middleware}. \\
+		
             
-                \begin{figure}[H]
-                    \centering
-                    \includegraphics[width=8cm,height=10cm]{Images/C-3/Middleware.png}
-                    \caption{Desain \textit{Middleware}}
-                    \label{desain:middleware}
-				\end{figure}
-            \indent \textit{HTTP Rest API} dibangun menggunakan Flask yang sudah terintegrasi gitPython dan Python watchdog. Modul gitPython dan Python Watchdog digunakan untuk mengamati repositori perangkat jaringan.
-            
-        \subsubsection{Perancangan \textit{Repository Observer}}
+        \subsection{Perancangan \textit{Repository Observer}}
             Pada sistem ini Middleware harus bisa mengamati repositori perangkat jaringan secara berkelanjutan dan melakukan update pada history commit pada repositori. Untuk melakukan hal tersebut modul watchdog di dalam middleware yang akan melihat setiap perubahan pada respositori perangkat jaringan. Modul watchdog berjalan sebagai thread yang menunggu perubahan kondisi di dalam repositori. Ketika thread mengidentifikasi ada perubahan di dalam repositori maka thread akan menjalankan perintah commit menggunakan modul gitPython yang terintegrasi dengan middleware.
             \begin{figure}[H]
             	\centering
@@ -90,8 +87,9 @@
 	        \end{figure}
         
         
-        \subsubsection{Perancangan Web \textit{Service}}
-        	Dalam sistem yang dibangun, web service digunakan untuk menerjemahkan permintaan dari adiministrator jaringan. Web service memiliki antarmuka dan rute dengan parameter nama repositori dan permintaan fitur yang diinginkan. Setiap rute akan diproses oleh \textit{Middleware} dan kemudian mengirimkan respon kepada administrator.
+        \subsection{Perancangan Web \textit{Service}}
+        	Dalam sistem yang dibangun, web service digunakan untuk menerjemahkan permintaan dari adiministrator jaringan. Web service memiliki antarmuka dan rute dengan parameter nama repositori dan permintaan fitur yang diinginkan. Setiap rute akan diproses oleh \textit{Middleware} dan kemudian mengirimkan respon kepada administrator.\\
+        	Terdapat dua web service yang digunakan dalam sistem pelacakan konfigurasi perangkat jaringan yakni Gitea webapp dan flask API. Gitea webapp digunakan untuk menampilkan user interface dari sistem sedangkan flask API digunakan untuk melakukan operasi pada repositori lokal berdasarkan permintaan dari gitea webapp. 
          	
         
        

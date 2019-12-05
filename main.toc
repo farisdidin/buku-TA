@@ -32,10 +32,9 @@
 \contentsline {section}{\numberline {3.2}Kasus Penggunaan}{11}{section.3.2}
 \contentsline {section}{\numberline {3.3}Arsitektur Sistem}{13}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Desain Umum Sistem}{14}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Perancangan Repositori Perangkat }{14}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Perancangan \textit {Middleware}}{15}{subsection.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.3.1}Perancangan \textit {Repository Observer}}{16}{subsubsection.3.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.3.2}Perancangan Web \textit {Service}}{18}{subsubsection.3.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}Perancangan Repositori Perangkat }{15}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Perancangan \textit {Repository Observer}}{15}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Perancangan Web \textit {Service}}{17}{subsection.3.3.4}
 \contentsline {chapter}{\numberline {IV}IMPLEMENTASI}{19}{chapter.4}
 \contentsline {section}{\numberline {4.1}Lingkungan Implementasi}{19}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Perangkat Keras}{19}{subsection.4.1.1}
