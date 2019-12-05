@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  5 DEC 2019 11:25
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  5 DEC 2019 13:31
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1616,6 +1616,10 @@ File: Images/C-3/AlurPengirimanFile.png Graphic file (type bmp)
 [15]
 File: Images/C-3/CreateBranch.png Graphic file (type bmp)
 <Images/C-3/CreateBranch.png>
+File: Images/C-3/Web_Service.png Graphic file (type bmp)
+<Images/C-3/Web_Service.png>
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
+(Font)              scaled to size 9.22495pt on input line 96.
  [16]) (./chapters/4-Implementasi.tex [17] [18
 
 ]
@@ -1632,9 +1636,6 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
 Underfull \vbox (badness 3690) has occurred while \output is active []
 
  [22]
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 9.22495pt on input line 102.
-
 Overfull \hbox (4.92569pt too wide) in paragraph at lines 104--104
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
@@ -1708,10 +1709,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 26149 strings out of 493007
- 475209 string characters out of 6136719
+ 26154 strings out of 493007
+ 475327 string characters out of 6136719
  655115 words of memory out of 5000000
- 29757 multiletter control sequences out of 15000+600000
+ 29761 multiletter control sequences out of 15000+600000
  534333 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  46i,12n,67p,10439b,1004s stack positions out of 5000i,500n,10000p,200000b,80000s

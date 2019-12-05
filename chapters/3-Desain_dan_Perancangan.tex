@@ -89,8 +89,13 @@
         
         \subsection{Perancangan Web \textit{Service}}
         	Dalam sistem yang dibangun, web service digunakan untuk menerjemahkan permintaan dari adiministrator jaringan. Web service memiliki antarmuka dan rute dengan parameter nama repositori dan permintaan fitur yang diinginkan. Setiap rute akan diproses oleh \textit{Middleware} dan kemudian mengirimkan respon kepada administrator.\\
-        	Terdapat dua web service yang digunakan dalam sistem pelacakan konfigurasi perangkat jaringan yakni Gitea webapp dan flask API. Gitea webapp digunakan untuk menampilkan user interface dari sistem sedangkan flask API digunakan untuk melakukan operasi pada repositori lokal berdasarkan permintaan dari gitea webapp. 
-         	
+        	\indent Terdapat dua web service yang digunakan dalam sistem pelacakan konfigurasi perangkat jaringan yakni Gitea webapp dan flask API. Gitea webapp digunakan untuk menampilkan user interface dari sistem sedangkan flask API digunakan untuk melakukan operasi pada repositori lokal berdasarkan permintaan dari gitea webapp. 
+         	\begin{figure}[H]
+         		\centering
+         		\includegraphics[width=\textwidth]{Images/C-3/Web_Service.png}
+         		\caption{Perancangan Web \textit{Service}}
+         		\label{WebService}
+         	\end{figure}
         
        
             

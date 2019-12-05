@@ -54,8 +54,8 @@
 \contentsline {chapter}{\numberline {VI}PENUTUP}{27}{chapter.6}
 \contentsline {section}{\numberline {6.1}Kesimpulan}{27}{section.6.1}
 \contentsline {section}{\numberline {6.2}Saran}{27}{section.6.2}
-\contentsline {chapter}{DAFTAR PUSTAKA}{29}{chapter*.12}
+\contentsline {chapter}{DAFTAR PUSTAKA}{29}{chapter*.13}
 \contentsline {chapter}{\numberline {A}INSTALASI PERANGKAT LUNAK}{31}{appendix.A}
 \contentsline {chapter}{\numberline {B}KODE SUMBER}{33}{appendix.B}
-\contentsline {chapter}{DAFTAR PUSTAKA}{35}{appendix*.13}
-\contentsline {chapter}{BIODATA PENULIS}{37}{appendix*.14}
+\contentsline {chapter}{DAFTAR PUSTAKA}{35}{appendix*.14}
+\contentsline {chapter}{BIODATA PENULIS}{37}{appendix*.15}
