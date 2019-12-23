@@ -1,13 +1,41 @@
 \chapter{INSTALASI PERANGKAT LUNAK}
 
+\section*{Instalasi Protokol Pengiriman File}
+	
+	\begin{itemize}
+	\item TFTP \\
+		\$ \texttt{sudo apt install tftp-hpa tftpd-hpa}
+	\item FTP \\
+		\$ \texttt{sudo apt-get install vsftpd}
+	\end{itemize} 
+
+\section*{Instalasi Bahasa Go}
+	\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Instalasi Bahasa Go},label=InstalasiGo, captionpos=b, language=json,numbers=none]
+	cd ~
+	curl -O https://dl.google.com/go/go1.13.5.linux-amd64.tar.gz
+	
+	tar xvf go1.13.5.linux-amd64.tar.gz
+	sudo chown -R root:root ./go
+	sudo mv go /usr/local
+	\end{lstlisting}
+	Selanjutnya export path untuk bahasa Go di dalam \path{~/.profile}
+	\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Pengaturan Path},label=nonrootuser, captionpos=b, language=json,numbers=none]
+	export GOPATH=$HOME/go
+	export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+	\end{lstlisting}
+	
 \section*{Instalasi Pustaka Python} \label{install:pythonlibrary}
 	Dalam pengembangan sistem ini, digunakan berbagai pustaka pendukung. Pustaka pendukung yang digunakan merupakan pustaka untuk bahasa pemrograman Python. Berikut adalah daftar pustaka yang digunakan dan cara pemasangannya:
+	
     \begin{itemize}
-    \item Python Dev \\
-    	\$ \texttt{sudo apt-get install python-dev}
+    \item Python \\
+    	\$ \texttt{sudo apt-get install python3}
     \item Flask \\
-    	\$ \texttt{sudo pip install Flask}
-    
+    	\$ \texttt{sudo pip3 install Flask}
+   	\item Watchdog \\
+	   	\$ \texttt{sudo pip3 install watchdog}
+   	\item Gitpython \\
+    	\$ \texttt{sudo pip3 install gitpython}
     \end{itemize}
 
 

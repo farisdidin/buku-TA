@@ -1,15 +1,72 @@
 \chapter{PENGUJIAN DAN EVALUASI}
-
+Pada bab ini akan dibahas uji coba dan evaluasi dari sistem yang sudah dibuat. Sistem akan diuji coba fungsionalitasnya dengan menjalankan skenario pengujian fitur-fitur dari sistem yang dibuat. Sistem juga akan diuji coba performa dengan skenario pengujian beban terhadap sistem. Uji coba dilakukan untuk mengevaluasi kinerja dari sistem dengan lingkungan uji coba yang ditentukan.
 
 \section{Lingkungan Uji Coba}
+Lingkungan uji coba sistem ini adalah komponen middleware. Server yang digunakan sebagai \textit{middleware} merupakan \textit{Virtual Private Server} yang disediakan oleh DPTSI ITS. Spesifikasi dari \textit{Middleware} bisa dilihat di tabel \ref{tabelKomponen} 
+   \begin{longtable}{|p{0.03\textwidth}|p{0.18\textwidth}|p{0.30\textwidth}|p{0.35\textwidth}|}
+   	
+   	\caption{Spesifikasi Komponen} \label{tabelKomponen} \\
+   	\hline
+   	\textbf{No} & \textbf{Komponen} & \textbf{Perangkat Keras} & \textbf{Perangkat Lunak} \\ \hline
+   	\endfirsthead
+   	
+   	\hline
+   	\textbf{No} & \textbf{Komponen} & \textbf{Perangkat Keras} & \textbf{Perangkat Lunak} \\ \hline
+   	\endhead
+   	\endfoot
+   	\endlastfoot
+   	
+   	1 & \textit{Middleware} & 4 Core Processor, 4GB RAM, HDD 64 GB & Ubuntu 18.04.3, MySQL 5.7, Python 3.6, Go1.13.5, Flask 1.0.3, Python 3.6 \\ \hline
+		
+   	
+   \end{longtable}
 
-   
-\section{Skenario Uji Coba} \label{skenarioujicoba}
+\section{Skenario Uji Coba}
+Uji coba ini dilakukan untuk menguji fungsionalitas dari sistem yang dibuat telah sesuai dengan perancangan dan sistem benar-benar diimplementasikan dan bekerja sesuai seharusnya. Skenario pengujian dibedakan menjadi 2 bagian yaitu:
+\begin{itemize}
+	\item \textbf{Uji Fungsionalitas} \\
+	Pengujian yang dilakukan berdasarkan fungsionalitas yang disediakan sistem.
+	\item \textbf{Uji Performa} \\
+	Pengujian yang dilakukan untuk melihat waktu yang diperlukan untuk menyimpan konfigurasi perangkat jaringan.
+\end{itemize}  
 	
     
     
     \subsection{Skenario Uji Coba Fungsionalitas}
-    	     
+    Uji fungsionalitas dibagi menjadi beberapa bagian antara lain yaitu \textit{user} mengelola repositori, \textit{user} mengirim file konfigurasi, \textit{user} melakukan checkout commit, mengunduh file setelah checkout commit, dan percabangan commit.
+    	
+    	\subsubsection{Uji Fungsionalitas \textit{User} Mengelola Repositori}
+    	Uji coba dilakukan dengan user mengakses sistem melalui rute untuk mengelola repositori. \textit{User} mengirimkan request ke manajemen konsol. Rancangan pengujian dan hasil yang diinginkan dapat dilihat pada Tabel .
+    	\begin{longtable}{|p{0.03\textwidth}|p{0.23\textwidth}|p{0.27 \textwidth}|p{0.33\textwidth}|}
+    		
+    		\caption{skenario uji fungsionalitas user mengelola repositori} \label{mengelolaRepositori} \\
+    		\hline
+    		\textbf{No} & \textbf{Rute} & \textbf{Uji Coba} & \textbf{Harapan} \\ \hline
+    		\endfirsthead
+    		
+    		\hline
+    		\textbf{No} & \textbf{Rute} & \textbf{Uji Coba} & \textbf{Harapan} \\ \hline
+    		\endhead
+    		\endfoot
+    		\endlastfoot
+    		
+    		1 & \path{/repo/create} & Mengirimkan request menuju manajemen konsol & Request berhasil diterima manajemen konsol, kemudian manajemen konsol meampilkan halaman untuk membuat repositori \\ \hline
+    		2 & \path{/{username}/{reponame}} & Mengirimkan request menuju manajemen konsol & Request berhasil diterima manajemen konsol, kemudian manajemen konsol menampilkan repositori dari \textit{user}\\ \hline
+    		3 & \path{/{username}/{reponame}/commits/branch/{branchname}} & Mengirimkan request menuju manajemen konsol & Request berhasil diterima manajemen konsol, kemudian manajemen konsol menampilkan daftar commit pada repositori. \\ \hline 
+    		4 & \path{/{username}/{reponame}/commit/{hashcommit}} & Mengirimkan request menuju manajemen konsol & Request berhasil diterima manajemen konsol, kemudian manajemen konsol menampilkan diff commit dari hash yang dipilih dengan \textit{commit parent}-nya. \\ \hline 
+	    \end{longtable}
+    	\subsubsection{Uji Fungsionalitas User Mengirim Konfigurasi}
+    	Uji coba ini dilakukan dengan cara user mengirimkan file konfigurasi dari perangkat jaringan menuju \textit{middleware} sistem. Pengiriman konfigurasi menggunakan protokol yang didukung oleh perangkat jaringan. Setelah file dikirim, \textit{middleware} akan melihat ada perubahan dalam repositori sehingga \textit{middleware} langsung menjalankan perintah commit dan push. Setelah commit dilakukan dapat dilihat histori commit dari repositori.
+    	
+    	\subsubsection{Uji Fungsionalitas \textit{User} Checkout Commit}
+    	Uji coba ini dilakukan dengan cara user me-klik tombol checkout pada daftar commit di dalam repositori. Sistem akan melakukan checkout commit pada repositori lokal sehingga posisi \textit{head} commit berpindah sesuai commit yang dipilih.
+    	
+    	\subsubsection{Uji Fungsionalitas Unduh Konfigurasi}
+    	Uji coba ini dilakukan dengan cara user mengakses perangkat jaringan yang terhubung dengan \textit{Middleware}. User kemudian mengunduh file konfigurasi dari \textit{middleware} kedalam perangkat jaringan. 
+    	
+    	\subsubsection{Uji Fungsionalitas Percabangan Commit}
+    	Uji coba ini dilakukan dengan cara user melakukan checkout pada repositori. Setelah checkout, user kemudian mengakses perangkat jaringan dan mengirimkan file konfigurasi ke \textit{middleware}. Karena posisi head tidak berada pada posisi commit terbaru maka sistem akan otomatis membuat cabang baru setelah ada perubahan di dalam repositori.
+    	 
     \subsection{Skenario Uji Coba Performa}
     	
     

@@ -6,13 +6,13 @@
     	
     	\indent Sistem memiliki server repositori untuk menyimpan file konfigurasi dari perangkat jaringan yang dikirim melalui protokol TFTP dan FTP menyesuaikan protokol yang didukung oleh perangkat jaringan. Di dalam sistem terdapat \textit{Repository Observer} yang berfungsi untuk melihat perubahan di dalam repositori. Ketika ada perubahan, sistem otomatis melakukan commit terhadap Git untuk mencatat perubahan dari file.\\
     	
-    	\indent Di dalam sistem terdapat dua \textit{web service} yang digunakan yaitu Gitea dan Flask. Web service tersebut digunakan untuk menerjemahkan instruksi dari administrator kepada sistem sesuai dengan diagram penggunaan pada Gambar \ref{usecase}. 
+    	\indent Di dalam sistem terdapat dua manajemen konsol yang digunakan yaitu Gitea dan Flask. Manajemen konsol tersebut digunakan untuk menerjemahkan instruksi dari administrator kepada sistem sesuai dengan diagram penggunaan pada Gambar \ref{usecase}. 
 	
     \section{Kasus Penggunaan}
     	Dalam sistem ini hanya ada satu aktor yaitu \textit{administrator} jaringan yang akan mengatur penyimpanan konfigurasi. Diagram kasus penggunaan digambarkan pada Gambar \ref{usecase}.
         \begin{figure}[H]
 			\centering
-			\includegraphics[width=8cm,height=8cm]{Images/C-3/UC.png}
+			\includegraphics[width=8cm,height=8cm]{Images/C-3/UC-2.png}
 			\caption{Diagram Kasus Penggunaan}
 			\label{usecase}
 		\end{figure}
@@ -34,8 +34,8 @@
 		    	\endfoot
 		    	\endlastfoot
 		    	
-		    	UC-0001 & Meminta URI. & \textit{Administrator} dapat meminta alamat URI untuk mengirim konfigurasi dari perangkat jaringan.\\ \hline
-		    	UC-0002 & Membuat Direktori Penyimpanan.  & \textit{Administrator} dapat membuat direktori untuk menyimpan konfigurasi dari perangkat jaringan.\\ \hline
+		    	UC-0001 & Membuat Direktori Penyimpanan. & \textit{Administrator} dapat membuat direktori untuk menyimpan konfigurasi dari perangkat jaringan.\\ \hline
+		    	UC-0002 & Menghapus Direktori Penyimpanan.  & \textit{Administrator} dapat menghapus direktori penyimpanan jika sudah tidak digunakan.\\ \hline
 		    	UC-0003 & Melihat Commit. & \textit{Administrator} dapat melihat riwayat commit dalam repositori perangkat. \\ \hline
 		    	UC-0004 & Checkout Commit. & Administrator dapat berpindah commit (checkout) sesuai dengan versi commit yang diinginkan. \\ \hline
 				UC-0005 & Diff Commit. & Administrator dapat melihat perbedaan antara commit satu dengan lainnya. \\ \hline		    	
@@ -55,7 +55,7 @@
 			\begin{enumerate}
 				\item \textit{Repository Server} untuk menyimpan file konfigurasi dari perangkat jaringan.
 				\item \textit{Repository Observer} untuk melihat perubahan file yang disimpan di dalam repository server.
-				\item \textit{Web Service} untuk menerjemahkan intruksi dari admin kepada sistem.
+				\item Manajemen Konsol untuk menerjemahkan intruksi dari admin kepada sistem.
 			\end{enumerate}
                 
                 
@@ -87,14 +87,14 @@
 	        \end{figure}
         
         
-        \subsection{Perancangan Web \textit{Service}}
-        	Dalam sistem yang dibangun, web service digunakan untuk menerjemahkan permintaan dari adiministrator jaringan. Web service memiliki antarmuka dan rute dengan parameter nama repositori dan permintaan fitur yang diinginkan. Setiap rute akan diproses oleh \textit{Middleware} dan kemudian mengirimkan respon kepada administrator.\\
-        	\indent Terdapat dua web service yang digunakan dalam sistem pelacakan konfigurasi perangkat jaringan yakni Gitea webapp dan flask API. Gitea webapp digunakan untuk menampilkan user interface dari sistem sedangkan flask API digunakan untuk melakukan operasi pada repositori lokal berdasarkan permintaan dari gitea webapp. 
+        \subsection{Perancangan Manajemen Konsol}
+        	Dalam sistem yang dibangun, manajemen konsol digunakan untuk menerjemahkan permintaan dari adiministrator jaringan. Manajemen konsol memiliki antarmuka dan rute dengan parameter nama repositori dan permintaan fitur yang diinginkan. Setiap rute akan diproses oleh \textit{Middleware} dan kemudian mengirimkan respon kepada administrator.\\
+        	\indent Terdapat dua manajemen konsol yang digunakan dalam sistem pelacakan konfigurasi perangkat jaringan yakni Gitea webapp dan flask API. Gitea webapp digunakan untuk menampilkan user interface dari sistem tetapi dalam sistem yang akan dibuat ada beberapa fitur yang tidak disediakan oleh Gitea yaitu fitur untuk melihat letak head commit dan fitur untuk checkout commit. Untuk mengatasi hal tersebut maka digunakan Flask API untuk untuk melihat letak head commit dan checkout commit pada repositori lokal.  
          	\begin{figure}[H]
          		\centering
          		\includegraphics[width=\textwidth]{Images/C-3/Web_Service.png}
-         		\caption{Perancangan Web \textit{Service}}
-         		\label{WebService}
+         		\caption{Perancangan Manajemen Konsol}
+         		\label{ManajemenKonsol}
          	\end{figure}
         
        

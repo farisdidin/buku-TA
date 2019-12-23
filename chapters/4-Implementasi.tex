@@ -5,44 +5,52 @@
        \subsection{Perangkat Keras}
         	Perangkat keras yang digunakan dalam pengembangan sistem adalah sebagai berikut:
         	\begin{enumerate}
-        		\item Komputer dengan processor Intel Core i5-8250U @ 8x 3.4GHz dan RAM 8GB.
+        		\item Virtual Private Server dengan CPU Intel(R) Xeon(R) CPU E5-2690 v4 @ 2.60GHz dan RAM 8GB.
         	\end{enumerate}
             
        \subsection{Perangkat Lunak}
     	    Perangkat lunak yang digunakan dalam pengembangan adalah sebagai berikut:
     	    \begin{enumerate}
     	    	\item Sistem Operasi Ubuntu 18.04 LTS 64 Bit.
-    	    	\item Flask versi 1.0.3 untuk pengembangan \textit{Web Service}.
+    	    	\item Flask versi 1.0.3 untuk pengembangan manajemen konsol.
     	    	\item Git versi 2.17.1 untuk \textit{versioning} file konfigurasi.
     	    	\item TFTP untuk protokol pengiriman file konfigurasi.
     	    	\item FTP untuk protokol pengiriman file konfigurasi.
-    	    	\item GNS3 untuk emulator perangkat jaringan.
+    	    	\item Gitea untuk pengembangan manajemen konsol. 
     	    	
     	    \end{enumerate}
        
     \section{Implementasi Repositori Perangkat}
-    	Repositori perangkat mendukung dua protokol pengiriman file yaitu File Transfer Protocol (FTP) dan Trivial File Transfer Protocol (TFTP). Ada beberapa tahap agar protokol-protokol tersebut bisa digunakan yakni pemasangan dan konfigurasi. Untuk melakukan pemasangan TFTP terlebih dahulu jalankan perintah berikut pada terminal.
-	\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Perintah untuk pemasangan TFTP },label=nonrootuser, captionpos=b, language=json,numbers=none]
-	sudo apt update 
-	sudo apt install tftp-hpa tftpd-hpa
-	\end{lstlisting}
+    	Repositori perangkat mendukung dua protokol pengiriman file yaitu File Transfer Protocol (FTP) dan Trivial File Transfer Protocol (TFTP). Ada beberapa tahap agar protokol-protokol tersebut bisa digunakan yakni pemasangan dan konfigurasi. Untuk implementasi Reposi Perangkat terdapat dua tahap yakni :
+    	\begin{enumerate}
+    		\item Implementasi direktori untuk protokol TFTP.
+    		\item Implementasi direktori untuk protokol FTP.
+    	\end{enumerate}
+    	\subsection{Implementasi Protokol TFTP} 
+    	Untuk melakukan pemasangan TFTP bisa dilihat di lampiran kode sumber .
+%	\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Perintah untuk pemasangan TFTP },label=nonrootuser, captionpos=b, language=json,numbers=none]
+%	sudo apt update 
+%	sudo apt install tftp-hpa tftpd-hpa
+%	\end{lstlisting}
     	Setelah selesai melakukan pemasangan maka kita perlu melakukan konfigurasi TFTP pada file \path{/etc/default/tftpd-hpa}.
 
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Konfigurasi TFTP },label=nonrootuser, captionpos=b, language=json,numbers=none]
-   	TFTP_USERNAME="tftp"
-   	TFTP_DIRECTORY="/home/didin/Project/TA/config/tftp"
-   	TFTP_ADDRESS=":69"
-   	TFTP_OPTIONS="--secure --create"
-\end{lstlisting}
+	\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Konfigurasi TFTP },label=nonrootuser, captionpos=b, language=json,numbers=none]
+	TFTP_USERNAME="tftp"
+	TFTP_DIRECTORY="/home/didin/repo-local/tftp"
+	TFTP_ADDRESS=":69"
+	TFTP_OPTIONS="--secure --create"
+	\end{lstlisting}
         Setelah melakukan konfigurasi TFTP selanjutnya adalah melakukan konfigurasi pada direktori yang digunakan sebagai \textit{root} TFTP dengan menjalankan perintah berikut.
     \begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Konfigurasi direktori TFTP },label=nonrootuser, captionpos=b, language=json,numbers=none]
-    chown -R didin:tftp /home/didin/Project/TA/config/tftp
+    chown -R didin:tftp /home/didin/repo-local/tftp
     \end{lstlisting}
-        Selanjutnya dalam implementasi Repositor perangkat adalah pemasangan dan konfigurasi FTP. Untuk melakukan pemasangan FTP jalankan perintah seperti pada kode sumber.
-    \begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Pemasangan FTP },label=nonrootuser, captionpos=b, language=json,numbers=none]
-	sudo apt-get update
-	sudo apt-get install vsftpd
-    \end{lstlisting}
+    
+    \subsection{Implementasi Protokol FTP}
+        Selanjutnya dalam implementasi Repositori perangkat adalah pemasangan dan konfigurasi FTP. Untuk melakukan pemasangan FTP jalankan dapat dilihat di lampiran kode sumber.
+%    \begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Pemasangan FTP },label=nonrootuser, captionpos=b, language=json,numbers=none]
+%	sudo apt-get update
+%	sudo apt-get install vsftpd
+%   \end{lstlisting}
         Setelah melakukan pemasangan langkah selanjutnya adalah mengaktifkan port yang digunakan dalam FTP yakni port 20 dan 21 dengan menjalankan perintah.
     \begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Aktivasi port FTP},label=nonrootuser, captionpos=b, language=json,numbers=none]
     sudo ufw allow 20/tcp
@@ -69,6 +77,7 @@
     userlist_deny=NO
     chroot_local_user=YES
     allow_writeable_chroot=YES
+    local_root=/home/$USER/repo-local/ftp
     \end{lstlisting}
         Kemudian tambahkan nama pengguna yang punya otoritas untuk FTP di dalam file \path{/etc/vsftpd.userlist} dengan menjalankan perintah.
     \begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Pengguna FTP},label=nonrootuser, captionpos=b, language=json,numbers=none]
@@ -79,42 +88,82 @@
     systemctl restart vsftpd
     \end{lstlisting}
         
-    \section{Implementasi \textit{Middleware}}
-    	Di dalam \textit{middleware }terdapat dua komponen yang menunjang berjalannya sistem. Komponen tersebut yakni \textit{repository observer} untuk mengati perubahan file konfigurasi dan komponen \textit{web service} untuk menerjemahkan permintaan pengguna kepada \textit{middleware}.
-    	\subsection{Implementasi \textit{Repository Observer}}
-    		Middleware memiliki tugas untuk mencatat setiap perubahan yang terjadi pada file konfigurasi. Perubahan file konfigurasi terjadi ketika perangkat jaringan mengirim file konfigurasi menuju middleware. Untuk mengamati perubahan dalam direktori terdapat \textit{Repository Observer} dalam bentuk thread. Berikut pseudocode \textit{Repository Observer}.
-    		\begin{algorithm}[H]
-    			\If{file modified}{
-    				\eIf{head not a branch head}{
-    					create new branch\;
-    				}{reference head to branch\;}
-    				git add\;
-    				git commit\;
-    			}
-    			\If{checkout}{pause observer 5 second}
-    			\caption{Repository observer}
-    		\end{algorithm}
-    	\subsection{Implementasi \textit{Web Service}}
-    		\textit{Web service} pada \textit{middleware} berfungsi untuk menjembatani antara pengguna dengan \textit{middleware}. Pengguna mengirimkan permintaan melalui rute-rute yang dimiliki \textit{web service} kemudian permintaan diproses oleh \textit{midleware}. Berikut rute yang disediakan \textit{middleware} pada Tabel \ref{tabelRuteWebService}.
-    		
-    	\begin{longtable}{|p{0.03\textwidth}|p{0.27\textwidth}|p{0.13\textwidth}|p{0.41\textwidth}|}
-    		
-    		\caption{Tabel rute \textit{web service} pada \textit{middleware}} \label{tabelRuteWebService} \\
-    		\hline
-    		\textbf{No} & \textbf{Rute} & \textbf{\textit{Method}} & \textbf{Keterangan} \\ \hline
-    		\endfirsthead
-    		\caption[]{Tabel \textit{End-point} Manajemen \textit{Host}}   \\
-    		\hline
-    		\textbf{No} & \textbf{\textit{End-point}} & \textbf{\textit{Method}} & \textbf{Keterangan} \\ \hline
-    		\endhead
-    		\endfoot
-    		\endlastfoot
+   
+   	\section{Implementasi \textit{Repository Observer}}
+   		\textit{Middleware} memiliki tugas untuk mencatat setiap perubahan yang terjadi pada file konfigurasi. Perubahan file konfigurasi terjadi ketika perangkat jaringan mengirim file konfigurasi menuju \textit{middleware}. Untuk mengamati perubahan dalam direktori terdapat \textit{Repository Observer} dalam bentuk thread. Untuk membuat repository observer ada beberapa tahap yang diperlukan yakni pemasangan bahasa python dan modul-modul yang diperlukan kemudian pembuatan program untuk menjalankan \textit{thread repository observer}. Perangkat lunak yang diperlukan untuk dipasang adalah:
+   			\begin{enumerate}
+   				\item Python.
+   				\item Python Watchdog.
+   				\item Git Python.
+   			\end{enumerate}	
+   		  Berikut pseudocode yang berjalan dalam \textit{Repository Observer}.
+   		\begin{algorithm}[H]
+   			\If{file modified}{
+   				\eIf{head not a branch head}{
+   					create new branch\;
+   				}{reference head to branch\;}
+   				git add\;
+   				git commit\;
+   				git push\;
+   			}
+   			\If{checkout}{pause observer 2 second}
+   			\caption{Repository observer}
+   		\end{algorithm}
+   	\section{Implementasi Manajemen Konsol}
+   		Manajemen konsol pada \textit{middleware} berfungsi untuk menjembatani antara pengguna dengan \textit{middleware}. Pengguna mengirimkan permintaan melalui rute-rute yang dimiliki manajemen konsol kemudian permintaan diproses oleh \textit{midleware}. Dalam sistem yang dibuat ini web service yang digunakan adalah Gitea yang merupakan self-hosted git dan juga Flask API. 
+   		\subsection{Implementasi Gitea}
+   		
+   		Untuk menggunakan Gitea ada beberapa tahap yang harus dilakukan terlebih dahulu yakni :
+   			\begin{enumerate}
+   				\item Instalasi bahasa Go.
+   				\item Instalasi database Mysql.
+   				\item Pembuatan database gitea.
+   				\item Clone kode sumber Gitea.
+   			\end{enumerate}
+   		Instalasi bahasa Go dapat dilihat di \ref{InstalasiGo}.\\
+   		
+   		Untuk menggunakan fitur-fitur dalam sistem yang dibuat pengguna perlu mengakses rute-rute dalam \textit{Web Service}. Berikut rute yang disediakan Gitea webapp pada Tabel \ref{tabelRuteWebGitea}.
+   		
+   	\begin{longtable}{|p{0.03\textwidth}|p{0.27\textwidth}|p{0.13\textwidth}|p{0.41\textwidth}|}
+   		
+   		\caption{Tabel rute \textit{web service} pada \textit{middleware}} \label{tabelRuteWebGitea} \\
+   		\hline
+   		\textbf{No} & \textbf{Rute} & \textbf{\textit{Method}} & \textbf{Keterangan} \\ \hline
+   		\endfirsthead
+   		\caption[]{Tabel \textit{End-point} Manajemen \textit{Host}}   \\
+   		\hline
+   		\textbf{No} & \textbf{\textit{End-point}} & \textbf{\textit{Method}} & \textbf{Keterangan} \\ \hline
+   		\endhead
+   		\endfoot
+   		\endlastfoot
+   			
+   			1 & \url{/user/sign_up} & Post & Membuat user untuk administrator. \\ \hline
+			2 & \url{/user/login} & Post & Login user administrator. \\ \hline
+			3 & \url{/repo/create} & Post & Membuat repositori Gitea. \\ \hline 
+			4 & \url{/{username}/{reponame}} & Get & Menampilkan repositori dari user.\\ \hline
+			5 & \url{/{username}/{reponame}/commits/branch/{namabranch}} & Get & Menampilkan commit pada repositori.\\ \hline		
+   			
+   		\end{longtable}
+   	
+   	\subsection{Implementasi Flask API}
+    		Untuk melenngkapi fitur yang tidak disediakan oleh Gitea maka dibuat Flask API. Berikut rute yang disediakan oleh Flask API\ref{tabelRuteFlaskApi}.
+    			\begin{longtable}{|p{0.03\textwidth}|p{0.27\textwidth}|p{0.13\textwidth}|p{0.41\textwidth}|}
     			
-    			1 & \url{/create/<protocol>/<name>} & Get & Membuat direktori untuk repositori perangkat \\ \hline
-				2 & \url{/list_repo/} & Get & Menampilkan seluruh direktori repositori. \\ \hline
-				3 & \url{/<repoName>/checkout/<commit>} & Get & Checkout menuju commit yang diinginkan.\\ \hline
-				4 & \url{/graph/<repoName>} & Get & Menampilkan commit pada repositori.\\ \hline		
+    			\caption{Tabel rute \textit{web service} pada \textit{middleware}} \label{tabelRuteFlaskApi} \\
+    			\hline
+    			\textbf{No} & \textbf{Rute} & \textbf{\textit{Method}} & \textbf{Keterangan} \\ \hline
+    			\endfirsthead
+    			\caption[]{Tabel \textit{End-point} Manajemen \textit{Host}}   \\
+    			\hline
+    			\textbf{No} & \textbf{\textit{End-point}} & \textbf{\textit{Method}} & \textbf{Keterangan} \\ \hline
+    			\endhead
+    			\endfoot
+    			\endlastfoot
+    			
+    			1 & \url{/create/{protocol}/{name}} & Get & Membuat repositori lokal untuk perangkat jaringan. \\ \hline
+    			2 & \url{/remove/{reponame}} & Get & Menghapus repositori lokal. \\ \hline	
+    			3 & \url{/checkout/{reponame}/{commit}} & Get & Checkout pada commit.\\ \hline	
+    			4 & \url{/head/{reponame}} & Get & Melihat head saat ini.\\ \hline
     			
     		\end{longtable}
-    		
-    	
+   		
