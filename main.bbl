@@ -21,10 +21,11 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{git_about}
+\bibitem{git_workflow}
 \BIBentryALTinterwordspacing
-``About - git,'' 22 Desember 2019. [Daring]. Tersedia pada:
-  \url{https://git-scm.com}. [Diakses: 22 Desember 2019].
+``Subversion,'' 23 Desember 2019. [Daring]. Tersedia pada:
+  \url{https://polyawesomism.wordpress.com/tag/subversion/}. [Diakses: 23
+  Desember 2019].
 \BIBentrySTDinterwordspacing
 
 \bibitem{versioning_popularity}
@@ -78,11 +79,10 @@ N.~Udayakumar, A.~Khera, L.~Suri, C.~Gupta, dan T.~Subbulakshmi, ``Bandwidth
   analysis of file transfer protocol,'' in \emph{2018 International Conference
   on Communication and Signal Processing (ICCSP)}, April 2018.
 
-\bibitem{git_workflow}
+\bibitem{git_about}
 \BIBentryALTinterwordspacing
-``Subversion,'' 23 Desember 2019. [Daring]. Tersedia pada:
-  \url{https://polyawesomism.wordpress.com/tag/subversion/}. [Diakses: 23
-  Desember 2019].
+``About - git,'' 22 Desember 2019. [Daring]. Tersedia pada:
+  \url{https://git-scm.com}. [Diakses: 22 Desember 2019].
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

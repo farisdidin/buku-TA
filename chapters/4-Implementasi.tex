@@ -166,4 +166,27 @@
     			4 & \url{/head/{reponame}} & Get & Melihat head saat ini.\\ \hline
     			
     		\end{longtable}
+    	
+   	\subsection{Implementasi Skema Basis Data}
+   	Berdasarkan perancangan sistem pada bab sebelumnya data akan disimpan pada basis data MySQL. Data yang akan disimpan adalah data dari perangkat yang terhubung dengan sistem. Rincian tabel perangkat dapat dilihat pada tabel.
+   	\begin{longtable}{|p{0.03\textwidth}|p{0.25\textwidth}|p{0.20\textwidth}|p{0.35\textwidth}|}
+   		
+   		\caption{Tabel device} \label{tabeldevice} \\
+   		\hline
+   		\textbf{No} & \textbf{Kolom} & \textbf{Tipe} & \textbf{Keterangan} \\ \hline
+   		\endfirsthead
+   		\caption[]{Tabel device}   \\
+   		\hline
+   		\textbf{No} & \textbf{Kolom} & \textbf{Tipe} & \textbf{Keterangan} \\ \hline
+   		\endhead
+   		\endfoot
+   		\endlastfoot
+   		
+   		1 & id & int & sebagai \textit{primary key}. \\ \hline
+   		2 & device\_name & varchar(100) & Menunjukkan nama perangkat. \\ \hline
+   		3 & device\_ip & varchar(100) & Menunjukkan alamat IP dari perangkat.\\ \hline	
+   		4 & device\_repo & varchar(100) & Menunjukkan path \textit{repositori} perangkat.\\ \hline
+   		5 & device\_version & varchar(100) & Menunjukkan versi terkini dari konfigurasi yang disimpan. \\ \hline
+   		
+   	\end{longtable}
    		

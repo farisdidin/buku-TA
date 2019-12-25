@@ -1,3 +1,223 @@
 \chapter{KODE SUMBER}
 
-\section*{File Environment Middleware}
+\section*{Kode Sumber Pengamat Perubahan Repositori}
+	\subsection*{Kode Sumber Observer.py}
+	\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Kode sumber Observer.py},label=observer, captionpos=b, language=json]
+	import threading
+	import sys
+	import time
+	import datetime
+	
+	from watchdog.observers import Observer
+	from watchdog.events import FileSystemEventHandler
+	from watchdog.events import PatternMatchingEventHandler
+	
+	from git import Repo, Git
+	
+	from app.src.ApplicationRepo import ApplicationRepo as ar
+	
+	class ObserverThread(threading.Thread):
+	def __init__(self,path,name):
+	threading.Thread.__init__(self)
+	self.repo_path = path
+	self.name = name
+	
+	def pause_thread(self):
+	self.observer.pause()
+	
+	def cont_thread(self):
+	self.observer.resume()
+	
+	
+	def run(self):
+	print("thread started")
+	self.event_handler = EventHandler(self.name,self.repo_path)
+	
+	self.observer = PausingObserver()
+	
+	self.observer.schedule(self.event_handler, self.repo_path, recursive=True)
+	self.observer.start()
+	
+	try:
+	while True:
+	time.sleep(1)
+	except KeyboardInterrupt:
+	self.observer.stop()
+	self.observer.join()
+	
+	class PausingObserver(Observer):
+	def dispatch_events(self, *args, **kwargs):
+	if not getattr(self, '_is_paused', False):
+	super(PausingObserver, self).dispatch_events(*args, **kwargs)
+	
+	def pause(self):
+	self._is_paused = True
+	
+	def resume(self):
+	time.sleep(2)  # allow interim events to be queued
+	self.event_queue.queue.clear()
+	self._is_paused = False
+	
+	class EventHandler(PatternMatchingEventHandler):
+	def __init__(self,repo_name, repo_path):
+	print("shitlyfe")
+	print(self)
+	to_ignore = '*/'+repo_name
+	super(EventHandler, self).__init__(ignore_patterns=["*/.git/*", to_ignore])
+	self.repo_name = repo_name
+	self.repo_path = repo_path
+	self.repository = ar(repo_path,repo_name)
+	
+	
+	def on_any_event(self, event):
+	eventType = ["deleted", "modified"]
+	global flag_checkout
+	
+	if event.event_type in eventType:
+	pathSplit = event.src_path.split("/")
+	if len(pathSplit) > 4:
+	if ".git" not in pathSplit:
+	print(event.event_type)
+	print(event.src_path)
+	print(pathSplit)
+	print(len(pathSplit))
+	print(self.repo_name)
+	if self.repository.check_repo():
+	self.repository.checkout_to_branch()
+	self.repository.push()
+	else:
+	self.repository.create_branch()
+	self.repository.push()
+		
+	\end{lstlisting}
+	
+	\subsection*{Kode Sumber ApplicationRepo.py}
+	\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Kode sumber ApplicationRepo.py},label=applicationrepo, captionpos=b, language=json]
+	import datetime
+	import collections
+	import requests
+	from git import Repo, Git
+	from app import var
+	
+	class ApplicationRepo():
+	def __init__(self,repo_path,repo_name):
+	Repo.init(repo_path)
+	self.repo = Repo(repo_path)
+	self.repo_path = repo_path
+	self.repoName = repo_name
+	self.api_endpoint = "http://localhost:3000/api/v1/user/repos"
+	self.api_token = var.API_TOKEN
+	# self.api_token = "token 5b297d2d0f6e7c6f5d7a7a8de53a776ae008c386"
+	self.repo_url = var.URL_GITEA+self.repoName+".git"
+	# self.repo_url = "http://didin:didin23@localhost:3000/didin/"+self.repoName+".git"
+	
+	# def init_repo(self):
+	#     Repo.init(self.repo_path)
+	
+	def create_gitea_repo(self):
+	data_create = {
+	"auto_init": True,
+	"description": "Readme for device "+ self.repoName,
+	
+	"issue_labels": "string_labels",
+	"name": self.repoName,
+	"private": False
+	}
+	
+	requests.post(url= self.api_endpoint, headers={'Authorization' : self.api_token}, data= data_create )
+	g=self.repo.git
+	g.remote('add', 'origin', self.repo_url)
+	
+	
+	
+	def get_branches(self):
+	branch = self.repo.git.branch()
+	branch = branch.replace('*','')
+	branch = branch.replace(' ','')
+	branch_split = branch.split('\n')
+	indices = [i for i, s in enumerate(branch_split) if 'HEAD' in s]
+	if indices:
+	del branch_split[indices[0]]
+	return branch_split
+	
+	def get_hash_branches(self):
+	show_ref = self.repo.git.show_ref(hash=10)
+	show_ref = show_ref.split('\n')
+	return show_ref
+	
+	def get_head(self):
+	repo = self.repo
+	commit = repo.head.commit
+	commit = repo.git.rev_parse(commit,short=10)
+	return commit
+	
+	def check_repo(self):
+	head = self.get_head()
+	if head in self.get_hash_branches():
+	return True
+	else:
+	return False
+	
+	def checkout_to_branch(self):
+	g = self.repo.git()
+	branch_index = self.get_hash_branches().index(self.get_head())
+	branch = self.get_branches()[branch_index]
+	g.checkout(branch)
+	
+	def push(self):
+	try:
+	dateNow = datetime.datetime.now()
+	self.repo.git.add('.')
+	self.repo.index.commit(dateNow.strftime("%Y-%m-%d %H-%M-%S"))
+	origin = self.repo.remote(name='origin')
+	current_commit = self.get_head()
+	index_branch = self.get_hash_branches().index(current_commit)
+	current_branch = self.get_branches()[index_branch]
+	
+	origin.push(current_branch)
+	print(self.repo)
+	except Exception as e:
+	print("Error Occured")
+	print(e)
+	finally:
+	print("Push completed")
+	
+	print("push function are called")
+	
+	def pull(self):
+	g=self.repo.git
+	g.remote('add', 'origin', self.repo_url)
+	self.repo.git.pull('origin', 'master')
+	
+	def create_branch(self):
+	g = self.repo.git
+	num = str(len(self.get_branches()))
+	new_branch = num+'-branch'
+	g.checkout(b=new_branch)
+	
+	def checkout(self, commit):
+	g = self.repo.git
+	g.checkout(commit)
+	
+	def get_log(self):
+	g = self.repo.git
+	return g.log(all=True, oneline=True, graph=True)
+	
+	def get_list_commits(self):
+	branches = self.get_branches()
+	result = collections.defaultdict(dict)
+	for i in branches:
+	commits = list(self.repo.iter_commits(i))
+	print(i)
+	array_commits = []
+	for commit in reversed(commits):
+	short_sha = self.repo.git.rev_parse(commit.hexsha,short=10)
+	if short_sha == self.get_head():
+	short_sha = short_sha+' {HEAD}'
+	print(short_sha)
+	array_commits.append(short_sha)
+	result[i]=array_commits
+	
+	return result
+	
+	\end{lstlisting}

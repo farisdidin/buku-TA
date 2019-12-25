@@ -13,7 +13,7 @@
         \begin{figure}[H]
 			\centering
 			\includegraphics[width=8cm,height=8cm]{Images/C-3/UC-2.png}
-			\caption{Diagram Kasus Penggunaan}
+			\caption{Diagram kasus penggunaan}
 			\label{usecase}
 		\end{figure}
         \indent Diagram kasus penggunaan pada Gambar \ref{usecase} dideskripsikan masing-masing pada Tabel \ref {tabelKodeKasusPenggunaan}.
@@ -23,11 +23,11 @@
 		    	% Kepala tabel, berulang di setiap halaman
 		    
 		    	
-		    	 \caption{Daftar Kode Kasus Penggunaan} \label{tabelKodeKasusPenggunaan} \\
+		    	 \caption{Daftar kode kasus penggunaan} \label{tabelKodeKasusPenggunaan} \\
 		    	\hline
 		    		\textbf{Kode Kasus Penggunaan} & \textbf{Nama Kasus Penggunaan} & \textbf{Keterangan} \\ \hline
 		    	\endfirsthead
-		    	\caption[]{Daftar Kode Kasus Penggunaan}   \\
+		    	\caption[]{Daftar kode kasus penggunaan}   \\
 		    	\hline
 		    		\textbf{Kode Kasus Penggunaan} & \textbf{Nama Kasus Penggunaan} & \textbf{Keterangan} \\ \hline
 		    	\endhead
@@ -45,8 +45,8 @@
 		Pada sub-bab ini, dibahas mengenai tahap analisis dan kebutuhan bisnis dan desain dari sistem yang akan dibangun. Arsitektur sistem secara umum ditunjukkan pada Gambar \ref{DesainUmumSistem}.\\
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=\textwidth]{Images/C-3/Desain-Umum-TA-2.png}
-			\caption{Desain Umum Sistem}
+			\includegraphics[width=\textwidth]{Images/C-3/Desain-Umum-TA-3.png}
+			\caption{Desain umum sistem}
 			\label{DesainUmumSistem}
 		\end{figure}
 
@@ -63,7 +63,7 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=\textwidth]{Images/C-3/Repository.png}
-				\caption{Desain Repositori Perangkat}
+				\caption{Desain repositori perangkat}
 				\label{DesainRepositoriPerangkat}
 			\end{figure}
 			Repositori perangkat adalah komponen untuk menyimpan file konfigurasi perangkat jaringan. Repositori perangkat merupakan direktori yang menjadi tujuan pegiriman file konfigurasi perangkat jaringan. Pengiriman file konfigurasi menggunakan TFTP dan FTP. Di dalam repositori perangkat, direktori akan dibedakan berdasarkan protokol pengiriman dan nama perangkat. Setiap perangkat memiliki direktori masing-masing dan setiap direktori merupakan \textit{Git Repository}.\\ 
@@ -75,14 +75,14 @@
             \begin{figure}[H]
             	\centering
             	\includegraphics[width=10cm,height=1cm]{Images/C-3/AlurPengirimanFile.png}
-            	\caption{Alur Pengiriman File}
+            	\caption{Alur pengiriman file}
             	\label{desain:pengiriman file}
             \end{figure}
 	        \indent Repository Observer juga mengatur pembentukan cabang dari repositori penyimpanan konfigurasi perangkat jaringan. Alur pembuatan cabang dari repositori seperti pada gambar \ref{CreateBranch}.
 	        \begin{figure}[H]
 	        	\centering
 	        	\includegraphics[width=\textwidth]{Images/C-3/CreateBranch.png}
-	        	\caption{Alur Pembuatan Branch}
+	        	\caption{Alur pembuatan branch}
 	        	\label{CreateBranch}
 	        \end{figure}
         
@@ -93,9 +93,12 @@
          	\begin{figure}[H]
          		\centering
          		\includegraphics[width=\textwidth]{Images/C-3/Web_Service.png}
-         		\caption{Perancangan Manajemen Konsol}
+         		\caption{Perancangan manajemen konsol}
          		\label{ManajemenKonsol}
          	\end{figure}
+         
+         \subsection{Perancangan Basis Data}
+         Dalam sistem diperlukan basis data untuk menyimpan data-data yang diperlukan. Basis data digunakan untuk menyimpan data dari perangkat jaringan yang terhubung dengan sistem. Oleh karena itu maka dibutuhkan tabel \textit{device} untuk menyimpan perangkat yang terhubung serta versi konfigurasi yang disimpan.
         
        
             

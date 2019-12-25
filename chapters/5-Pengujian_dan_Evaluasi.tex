@@ -36,6 +36,7 @@ Uji coba ini dilakukan untuk menguji fungsionalitas dari sistem yang dibuat tela
     Uji fungsionalitas dibagi menjadi beberapa bagian antara lain yaitu \textit{user} mengelola repositori, \textit{user} mengirim file konfigurasi, \textit{user} melakukan checkout commit, mengunduh file setelah checkout commit, dan percabangan commit.
     	
     	\subsubsection{Uji Fungsionalitas \textit{User} Mengelola Repositori}
+    	Uji coba ini bertujuan untuk memastikan fitur dari mengelola repositori dapat dijalankan dengan benar.
     	Uji coba dilakukan dengan user mengakses sistem melalui rute untuk mengelola repositori. \textit{User} mengirimkan request ke manajemen konsol. Rancangan pengujian dan hasil yang diinginkan dapat dilihat pada Tabel .
     	\begin{longtable}{|p{0.03\textwidth}|p{0.23\textwidth}|p{0.27 \textwidth}|p{0.33\textwidth}|}
     		
@@ -56,19 +57,29 @@ Uji coba ini dilakukan untuk menguji fungsionalitas dari sistem yang dibuat tela
     		4 & \path{/{username}/{reponame}/commit/{hashcommit}} & Mengirimkan request menuju manajemen konsol & Request berhasil diterima manajemen konsol, kemudian manajemen konsol menampilkan diff commit dari hash yang dipilih dengan \textit{commit parent}-nya. \\ \hline 
 	    \end{longtable}
     	\subsubsection{Uji Fungsionalitas User Mengirim Konfigurasi}
-    	Uji coba ini dilakukan dengan cara user mengirimkan file konfigurasi dari perangkat jaringan menuju \textit{middleware} sistem. Pengiriman konfigurasi menggunakan protokol yang didukung oleh perangkat jaringan. Setelah file dikirim, \textit{middleware} akan melihat ada perubahan dalam repositori sehingga \textit{middleware} langsung menjalankan perintah commit dan push. Setelah commit dilakukan dapat dilihat histori commit dari repositori.
+    	Uji coba ini bertujuan untuk memastikan perangkat jaringan dapat mengirim file konfigurasi ke dalam repositori sistem. Juga untuk memastikan setiap ada perubahan pada konfigurasi perangkat maka sistem otomatis melakukan commit pada git repositori.\\
+    	\indent Uji coba ini dilakukan dengan cara user mengirimkan file konfigurasi dari perangkat jaringan menuju \textit{middleware} sistem. Pengiriman konfigurasi menggunakan protokol yang didukung oleh perangkat jaringan. Setelah file dikirim, \textit{middleware} akan melihat ada perubahan dalam repositori sehingga \textit{middleware} langsung menjalankan perintah commit dan push. Setelah commit dilakukan dapat dilihat histori commit dari repositori.\\
+    	\indent Uji coba berhasil ketika file konfigurasi berhasil terkirim dan pada repositori terbuat commit baru.
     	
     	\subsubsection{Uji Fungsionalitas \textit{User} Checkout Commit}
-    	Uji coba ini dilakukan dengan cara user me-klik tombol checkout pada daftar commit di dalam repositori. Sistem akan melakukan checkout commit pada repositori lokal sehingga posisi \textit{head} commit berpindah sesuai commit yang dipilih.
+    	Uji coba ini bertujuan untuk memastikan admin dapat merubah versi commit dari file konfigurasi di dalam repositori.\\
+    	\indent Uji coba ini dilakukan dengan cara user me-klik tombol checkout pada daftar commit di dalam repositori. Sistem akan melakukan checkout commit pada repositori lokal sehingga posisi \textit{head} commit berpindah sesuai commit yang dipilih.\\
+    	\indent Uji coba berhasil ketika versi dari file konfigurasi berhasil berubah sesuai dengan yang diinginkan.
     	
     	\subsubsection{Uji Fungsionalitas Unduh Konfigurasi}
-    	Uji coba ini dilakukan dengan cara user mengakses perangkat jaringan yang terhubung dengan \textit{Middleware}. User kemudian mengunduh file konfigurasi dari \textit{middleware} kedalam perangkat jaringan. 
+    	Uji coba ini bertujuan untuk memastikan perangkat jaringan dapat mengunduh file konfigurasi dari \textit{middleware} sistem. Uji coba juga untuk memastikan perangkat jaringan bisa mengunduh semua versi yang ada di \textit{middleware} sistem. \\
+    	\indent Uji coba ini dilakukan dengan cara user mengakses perangkat jaringan yang terhubung dengan \textit{Middleware}. User kemudian mengunduh file konfigurasi dari \textit{middleware} kedalam perangkat jaringan . \\
+    	\indent Uji coba berhasil ketika perangkat jaringan bisa mengunduh file konfigurasi dari \textit{middleware} sistem.
     	
     	\subsubsection{Uji Fungsionalitas Percabangan Commit}
-    	Uji coba ini dilakukan dengan cara user melakukan checkout pada repositori. Setelah checkout, user kemudian mengakses perangkat jaringan dan mengirimkan file konfigurasi ke \textit{middleware}. Karena posisi head tidak berada pada posisi commit terbaru maka sistem akan otomatis membuat cabang baru setelah ada perubahan di dalam repositori.
+    	Uji coba ini bertujuan untuk memastikan ketika perangkat jaringan mengirim konfigurasi dan kondisi versi bukan merupakan versi terbaru maka akan terbentuk cabang baru pada commit repositori.\\
+    	\indent Uji coba ini dilakukan dengan cara user melakukan checkout pada repositori. Setelah checkout, user kemudian mengakses perangkat jaringan dan mengirimkan file konfigurasi ke \textit{middleware}. Karena posisi head tidak berada pada posisi commit terbaru maka sistem akan otomatis membuat cabang baru setelah ada perubahan di dalam repositori.\\
+    	Uji coba berhasil ketika setelah pengiriman file konfigurasi, repositori perangkat otomatis membuat cabang baru.
     	 
     \subsection{Skenario Uji Coba Performa}
-    	
+    	Uji performa digunakan untuk menguji bagaimana ketahanan sistem dalam menyimpan konfigurasi perangkat jaringan dan mengatur versi perangkat jaringan.\\
+    	\indent Uji performa dilakukan dengan cara mengirim konfigurasi dari perangkat jaringan dengan jumlah perangkat dan jumlah perubahan yang ditentukan. Diasumsikan perangkat jaringan melakukan perubahan setiap hari dalam satu tahun sehingga diperkirakan ada 365 perubahan. Jumlah perubahan kemudian dikalikan jumlah perangkat yang akan menyimpan konfigurasi. \\
+    	\indent Hasil yang diharapkan dari pengujian ini adalah sistem memiliki storage yang cukup untuk menyimpan konfigurasi minimal selama satu tahun. 
     
 \section{Hasil Uji Coba dan Evaluasi}
 	
