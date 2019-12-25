@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  25 DEC 2019 22:48
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  25 DEC 2019 22:58
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1828,12 +1828,12 @@ Overfull \hbox (8.97124pt too wide) in alignment at lines 52--58
 [28] [29]
 Underfull \vbox (badness 2698) has occurred while \output is active []
 
- [30])
-(./chapters/6-Penutup.tex [31] [32
-
-]
+ [30]
+[31]) (./chapters/6-Penutup.tex [32]
 BAB VI.
-) (./main.bbl [33] [34
+) (./main.bbl [33
+
+] [34
 
 ] [35]) (./chapters/7-Lampiran_A.tex [36]
 Lampiran A.
