@@ -51,10 +51,11 @@ Uji coba ini dilakukan untuk menguji fungsionalitas dari sistem yang dibuat tela
     		\endfoot
     		\endlastfoot
     		
-    		1 & \path{/repo/create} & Mengirimkan request menuju manajemen konsol & Request berhasil diterima manajemen konsol, kemudian manajemen konsol meampilkan halaman untuk membuat repositori \\ \hline
-    		2 & \path{/{username}/{reponame}} & Mengirimkan request menuju manajemen konsol & Request berhasil diterima manajemen konsol, kemudian manajemen konsol menampilkan repositori dari \textit{user}\\ \hline
-    		3 & \path{/{username}/{reponame}/commits/branch/{branchname}} & Mengirimkan request menuju manajemen konsol & Request berhasil diterima manajemen konsol, kemudian manajemen konsol menampilkan daftar commit pada repositori. \\ \hline 
-    		4 & \path{/{username}/{reponame}/commit/{hashcommit}} & Mengirimkan request menuju manajemen konsol & Request berhasil diterima manajemen konsol, kemudian manajemen konsol menampilkan diff commit dari hash yang dipilih dengan \textit{commit parent}-nya. \\ \hline 
+    		1 & \path{/home} & Mengirimkan request Get menuju manajemen konsol & Request berhasil diterima manajemen konsol, kemudian manajemen konsol meampilkan halaman daftar perangkat yang dihubungkan dan menampilkan form untuk menambahkan perangkat. \\ \hline
+    		2 & \path{/home} & Mengirimkan request Post menuju manajemen konsol & Request berhasil diterima manajemen konsol, kemudian manajemen konsol membuat repositori untuk perangkat yang ditambahkan.\\ \hline
+    		3 & \path{/{reponame}/branch/{branchname}} & Mengirimkan request menuju manajemen konsol & Request berhasil diterima manajemen konsol, kemudian manajemen konsol menampilkan daftar commit pada repositori. \\ \hline 
+    		4 & \path{/{username}/{reponame}/commit/{hashcommit}} & Mengirimkan request menuju manajemen konsol & Request berhasil diterima manajemen konsol, kemudian manajemen konsol menampilkan diff commit dari hash yang dipilih dengan \textit{commit parent}-nya. \\ \hline
+    		5 & \path{/delete/{reponame}} & Mengirimkan request menuju manajemen konsol & Request berhasil diterima manajemen konsol, kemudian sistem menghapus repositori.\\ \hline
 	    \end{longtable}
     	\subsubsection{Uji Fungsionalitas User Mengirim Konfigurasi}
     	Uji coba ini bertujuan untuk memastikan perangkat jaringan dapat mengirim file konfigurasi ke dalam repositori sistem. Juga untuk memastikan setiap ada perubahan pada konfigurasi perangkat maka sistem otomatis melakukan commit pada git repositori.\\
@@ -74,7 +75,7 @@ Uji coba ini dilakukan untuk menguji fungsionalitas dari sistem yang dibuat tela
     	\subsubsection{Uji Fungsionalitas Percabangan Commit}
     	Uji coba ini bertujuan untuk memastikan ketika perangkat jaringan mengirim konfigurasi dan kondisi versi bukan merupakan versi terbaru maka akan terbentuk cabang baru pada commit repositori.\\
     	\indent Uji coba ini dilakukan dengan cara user melakukan checkout pada repositori. Setelah checkout, user kemudian mengakses perangkat jaringan dan mengirimkan file konfigurasi ke \textit{middleware}. Karena posisi head tidak berada pada posisi commit terbaru maka sistem akan otomatis membuat cabang baru setelah ada perubahan di dalam repositori.\\
-    	Uji coba berhasil ketika setelah pengiriman file konfigurasi, repositori perangkat otomatis membuat cabang baru.
+    	\indent Uji coba berhasil ketika setelah pengiriman file konfigurasi, repositori perangkat otomatis membuat cabang baru.
     	 
     \subsection{Skenario Uji Coba Performa}
     	Uji performa digunakan untuk menguji bagaimana ketahanan sistem dalam menyimpan konfigurasi perangkat jaringan dan mengatur versi perangkat jaringan.\\
@@ -86,7 +87,89 @@ Uji coba ini dilakukan untuk menguji fungsionalitas dari sistem yang dibuat tela
 	
 	\subsection{Uji Fungsionalitas}
 	Berikut ini dijelaskan hasil dari pengujian fungsionalitas pada sistem yang sudah dibangun.
-    
+	
+	\subsubsection{Uji Fungsionalitas User Mengelola Repositori}
+	Uji coba dilakukan dengan mengakses manajemen konsol melalui rute yang ditentukan pada tabel \ref{hasilmengelolaRepositori}. Hasil pengujian dapat dilihat pada tabel .
+	\begin{longtable}{|p{0.03\textwidth}|p{0.23\textwidth}|p{0.40 \textwidth}|p{0.10\textwidth}|}
+		
+		\caption{Hasil uji fungsionalitas user mengelola repositori} \label{hasilmengelolaRepositori} \\
+		\hline
+		\textbf{No} & \textbf{Rute} & \textbf{Harapan} & \textbf{Hasil} \\ \hline
+		\endfirsthead
+		
+		\hline
+		\textbf{No} & \textbf{Rute} & \textbf{Harapan} & \textbf{Hasil} \\ \hline
+		\endhead
+		\endfoot
+		\endlastfoot
+		1 & \path{/home} & Request berhasil diterima manajemen konsol, kemudian manajemen konsol meampilkan halaman daftar perangkat yang dihubungkan dan menampilkan form untuk menambahkan perangkat. & OK \\ \hline
+		2 & \path{/home} & Request berhasil diterima manajemen konsol, kemudian manajemen konsol membuat repositori untuk perangkat yang ditambahkan. & OK\\ \hline
+		3 & \path{/{reponame}/branch/{branchname}} & Request berhasil diterima manajemen konsol, kemudian manajemen konsol menampilkan daftar commit pada repositori. & OK \\ \hline 
+		4 & \path{/{username}/{reponame}/commit/{hashcommit}} & Request berhasil diterima manajemen konsol, kemudian manajemen konsol menampilkan diff commit dari hash yang dipilih dengan \textit{commit parent}-nya. & OK \\ \hline
+		5 & \path{/delete/{reponame}} & Request berhasil diterima manajemen konsol, kemudian sistem menghapus repositori. & OK\\ \hline
+	
+	\end{longtable}
+
+	\subsubsection{Uji Fungsionalitas User Mengirim Konfigurasi}
+    Uji coba ini dilakukan dengan cara user mengirim file konfigurasi dari perangkat jaringan menggunakan protokol TFTP, FTP, dan SCP. Keterangan hasil uji bisa dilihat pada tabel.
+    \begin{longtable}{|p{0.03\textwidth}|p{0.23\textwidth}|p{0.40\textwidth}|p{0.10\textwidth}|}
+    	
+    	\caption{Hasil uji fungsionalitas user mengelola repositori} \label{hasilmengelolaRepositori} \\
+    	\hline
+    	\textbf{No} & \textbf{Protokol} & \textbf{Harapan} & \textbf{Hasil} \\ \hline
+    	\endfirsthead
+    	
+    	\hline
+    	\textbf{No} & \textbf{Protokol} & \textbf{Harapan} & \textbf{Hasil} \\ \hline
+    	\endhead
+    	\endfoot
+    	\endlastfoot
+    	1 & TFTP & File Konfigurasi terbuat di dalam repositori & OK\\ \hline
+    	2 & FTP & File Konfigurasi terbuat di dalam repositori & OK\\ \hline
+    	3 & SCP & File Konfigurasi terbuat di dalam repositori & OK\\ \hline
+    	
+    \end{longtable}
+
+	\subsubsection{Uji Fungsionalitas User Checkout Commit}
+	Uji coba ini dilakukan dengan cara user me-klik tombol checkout pada commit yang diinginkan. Keterangan hasil uji bisa dilihat pada tabel \ref{hasilCheckoutCommit}.
+	\begin{longtable}{|p{0.03\textwidth}|p{0.36\textwidth}|p{0.45\textwidth}|p{0.10\textwidth}|}
+		
+		\caption{Hasil uji fungsionalitas user checkout commit} \label{hasilCheckoutCommit} \\
+		\hline
+		\textbf{No} & \textbf{Checkout} & \textbf{Harapan} & \textbf{Hasil} \\ \hline
+		\endfirsthead
+		\hline
+		\textbf{No} & \textbf{Checkout} & \textbf{Harapan} & \textbf{Hasil} \\ \hline
+		\endhead
+		\endfoot
+		\endlastfoot
+		1 & Checkout pada satu branch & Versi pada repositori berubah & OK\\ \hline
+		2 & Checkout pada branch berbeda & Versi pada repositori berubah & OK\\ \hline
+		
+	\end{longtable}
+
+	\subsubsection{Uji Fungsionalitas Unduh Konfigurasi}
+	Uji coba dilakukan dengan cara administrator membuka perangkat jaringan dan mengunduh konfigurasi dari sistem. Keterangan hasil uji bisa dilihat pada tabel \ref{hasilUnduhKonfig}.
+	\begin{longtable}{|p{0.03\textwidth}|p{0.30\textwidth}|p{0.50\textwidth}|p{0.10\textwidth}|}
+		
+		\caption{Hasil uji fungsionalitas user checkout commit} \label{hasilUnduhKonfig} \\
+		\hline
+		\textbf{No} & \textbf{Unduhan} & \textbf{Harapan} & \textbf{Hasil} \\ \hline
+		\endfirsthead
+		\hline
+		\textbf{No} & \textbf{Unduhan} & \textbf{Harapan} & \textbf{Hasil} \\ \hline
+		\endhead
+		\endfoot
+		\endlastfoot
+		1 & Sebelum checkout & File konfigurasi berhasil diunduh & OK\\ \hline
+		2 & Setelah checkout & File konfigurasi berhasil diunduh & OK\\ \hline
+		
+	\end{longtable}
+	
+	
+	\subsubsection{Uji Fungsionalitas Percabangan Commit}
+	Uji coba ini dilakukan dengan cara mengunggah konfigurasi perangkat menuju sistem dengan kondisi versi dalam sistem bukan versi terbaru yang dicatat. Keterangan hasil ujicoba bisa dilihat pada tabel.
+	
    	
     \subsection{Hasil Uji Performa}
     Berikut ini dijelaskan hasil dari pengujian performa dari sistem yang sudah dibangun.

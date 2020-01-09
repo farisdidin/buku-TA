@@ -45,8 +45,8 @@
 \BOOKMARK [2][-]{subsection.4.2.2}{Implementasi\040Protokol\040FTP}{section.4.2}% 45
 \BOOKMARK [1][-]{section.4.3}{Implementasi\040Repository\040Observer}{chapter.4}% 46
 \BOOKMARK [1][-]{section.4.4}{Implementasi\040Manajemen\040Konsol}{chapter.4}% 47
-\BOOKMARK [2][-]{subsection.4.4.1}{Implementasi\040Gitea}{section.4.4}% 48
-\BOOKMARK [2][-]{subsection.4.4.2}{Implementasi\040Flask\040API}{section.4.4}% 49
+\BOOKMARK [2][-]{subsection.4.4.1}{Implementasi\040Flask}{section.4.4}% 48
+\BOOKMARK [2][-]{subsection.4.4.2}{Implementasi\040Gitea}{section.4.4}% 49
 \BOOKMARK [2][-]{subsection.4.4.3}{Implementasi\040Skema\040Basis\040Data}{section.4.4}% 50
 \BOOKMARK [0][-]{chapter.5}{PENGUJIAN\040DAN\040EVALUASI}{}% 51
 \BOOKMARK [1][-]{section.5.1}{Lingkungan\040Uji\040Coba}{chapter.5}% 52

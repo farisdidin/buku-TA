@@ -45,7 +45,7 @@
 		Pada sub-bab ini, dibahas mengenai tahap analisis dan kebutuhan bisnis dan desain dari sistem yang akan dibangun. Arsitektur sistem secara umum ditunjukkan pada Gambar \ref{DesainUmumSistem}.\\
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=\textwidth]{Images/C-3/Desain-Umum-TA-3.png}
+			\includegraphics[width=\textwidth]{Images/C-3/Desain-Umum-TA-4.png}
 			\caption{Desain umum sistem}
 			\label{DesainUmumSistem}
 		\end{figure}
@@ -55,7 +55,7 @@
 			\begin{enumerate}
 				\item \textit{Repository Server} untuk menyimpan file konfigurasi dari perangkat jaringan.
 				\item \textit{Repository Observer} untuk melihat perubahan file yang disimpan di dalam repository server.
-				\item Manajemen Konsol untuk menerjemahkan intruksi dari admin kepada sistem.
+				\item \textit{Console Management} untuk menerjemahkan intruksi dari admin kepada sistem.
 			\end{enumerate}
                 
                 
@@ -66,12 +66,12 @@
 				\caption{Desain repositori perangkat}
 				\label{DesainRepositoriPerangkat}
 			\end{figure}
-			Repositori perangkat adalah komponen untuk menyimpan file konfigurasi perangkat jaringan. Repositori perangkat merupakan direktori yang menjadi tujuan pegiriman file konfigurasi perangkat jaringan. Pengiriman file konfigurasi menggunakan TFTP dan FTP. Di dalam repositori perangkat, direktori akan dibedakan berdasarkan protokol pengiriman dan nama perangkat. Setiap perangkat memiliki direktori masing-masing dan setiap direktori merupakan \textit{Git Repository}.\\ 
+			Repositori perangkat adalah komponen untuk menyimpan file konfigurasi perangkat jaringan. Repositori perangkat merupakan direktori yang menjadi tujuan pegiriman file konfigurasi perangkat jaringan. Pengiriman file konfigurasi menggunakan TFTP dan FTP. Setiap perangkat memiliki direktori masing-masing dan setiap direktori merupakan \textit{Git Repository}.\\ 
 
 		
             
         \subsection{Perancangan \textit{Repository Observer}}
-            Pada sistem ini Middleware harus bisa mengamati repositori perangkat jaringan secara berkelanjutan dan melakukan update pada history commit pada repositori. Untuk melakukan hal tersebut modul watchdog di dalam middleware yang akan melihat setiap perubahan pada respositori perangkat jaringan. Modul watchdog berjalan sebagai thread yang menunggu perubahan kondisi di dalam repositori. Ketika thread mengidentifikasi ada perubahan di dalam repositori maka thread akan menjalankan perintah commit menggunakan modul gitPython yang terintegrasi dengan middleware.
+            Pada sistem ini \textit{Middleware} harus bisa mengamati repositori perangkat jaringan secara berkelanjutan dan melakukan update pada \textit{history} commit pada repositori. Untuk melakukan hal tersebut modul watchdog di dalam middleware yang akan melihat setiap perubahan pada respositori perangkat jaringan. Modul watchdog berjalan sebagai thread yang menunggu perubahan kondisi di dalam repositori. Ketika thread mengidentifikasi ada perubahan di dalam repositori maka thread akan menjalankan perintah commit menggunakan modul gitPython yang terintegrasi dengan middleware.
             \begin{figure}[H]
             	\centering
             	\includegraphics[width=10cm,height=1cm]{Images/C-3/AlurPengirimanFile.png}
@@ -89,7 +89,7 @@
         
         \subsection{Perancangan Manajemen Konsol}
         	Dalam sistem yang dibangun, manajemen konsol digunakan untuk menerjemahkan permintaan dari adiministrator jaringan. Manajemen konsol memiliki antarmuka dan rute dengan parameter nama repositori dan permintaan fitur yang diinginkan. Setiap rute akan diproses oleh \textit{Middleware} dan kemudian mengirimkan respon kepada administrator.\\
-        	\indent Terdapat dua manajemen konsol yang digunakan dalam sistem pelacakan konfigurasi perangkat jaringan yakni Gitea webapp dan flask API. Gitea webapp digunakan untuk menampilkan user interface dari sistem tetapi dalam sistem yang akan dibuat ada beberapa fitur yang tidak disediakan oleh Gitea yaitu fitur untuk melihat letak head commit dan fitur untuk checkout commit. Untuk mengatasi hal tersebut maka digunakan Flask API untuk untuk melihat letak head commit dan checkout commit pada repositori lokal.  
+        	\indent Terdapat dua manajemen konsol yang digunakan dalam sistem pelacakan konfigurasi perangkat jaringan yakni Gitea \textit{webapp} dan Flask. Flask digunakan untuk menampilkan \textit{user interface} dari sistem, akan tetapi flask memiliki keterbatasan dalam fitur melihat isi file konfigurasi dan melihat diff commit atau perbedaan antara commit. Untuk mengatasi permasalahan tersebut maka digunakan Gitea webapp untuk melihat isi file dan perbedaan antara commit.   
          	\begin{figure}[H]
          		\centering
          		\includegraphics[width=\textwidth]{Images/C-3/Web_Service.png}
