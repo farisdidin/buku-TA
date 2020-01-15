@@ -2,7 +2,7 @@
 Pada bab ini akan dibahas uji coba dan evaluasi dari sistem yang sudah dibuat. Sistem akan diuji coba fungsionalitasnya dengan menjalankan skenario pengujian fitur-fitur dari sistem yang dibuat. Sistem juga akan diuji coba performa dengan skenario pengujian beban terhadap sistem. Uji coba dilakukan untuk mengevaluasi kinerja dari sistem dengan lingkungan uji coba yang ditentukan.
 
 \section{Lingkungan Uji Coba}
-Lingkungan uji coba sistem ini adalah komponen middleware. Server yang digunakan sebagai \textit{middleware} merupakan \textit{Virtual Private Server} yang disediakan oleh DPTSI ITS. Spesifikasi dari \textit{Middleware} bisa dilihat di tabel \ref{tabelKomponen} 
+Lingkungan uji coba sistem ini terdiri dari beberapa komponen yaitu \textit{middleware} dan perangkat jaringan yang terhubung. Server yang digunakan sebagai \textit{middleware} merupakan \textit{Virtual Private Server} yang disediakan oleh DPTSI ITS. Perangkat jaringan yang digunakan adalah Cisco Catalyst 3560G. Spesifikasi dari \textit{Middleware} bisa dilihat di tabel \ref{tabelKomponen} 
    \begin{longtable}{|p{0.03\textwidth}|p{0.18\textwidth}|p{0.30\textwidth}|p{0.35\textwidth}|}
    	
    	\caption{Spesifikasi Komponen} \label{tabelKomponen} \\
@@ -17,6 +17,7 @@ Lingkungan uji coba sistem ini adalah komponen middleware. Server yang digunakan
    	\endlastfoot
    	
    	1 & \textit{Middleware} & 4 Core Processor, 4GB RAM, HDD 64 GB & Ubuntu 18.04.3, MySQL 5.7, Python 3.6, Go1.13.5, Flask 1.0.3, Python 3.6 \\ \hline
+   	2 & Switch & 512KB RAM, 38.7 Mpps, 2 Virtual Ethernet interfaces, 28 Gigabit Ethernet interfaces & ios Version 12.2(53)SE2 \\ \hline
 		
    	
    \end{longtable}
@@ -80,7 +81,7 @@ Uji coba ini dilakukan untuk menguji fungsionalitas dari sistem yang dibuat tela
     \subsection{Skenario Uji Coba Performa}
     	Uji performa digunakan untuk menguji bagaimana ketahanan sistem dalam menyimpan konfigurasi perangkat jaringan dan mengatur versi perangkat jaringan.\\
     	\indent Uji performa dilakukan dengan cara mengirim konfigurasi dari perangkat jaringan dengan jumlah perangkat dan jumlah perubahan yang ditentukan. Diasumsikan perangkat jaringan melakukan perubahan setiap hari dalam satu tahun sehingga diperkirakan ada 365 perubahan. Jumlah perubahan kemudian dikalikan jumlah perangkat yang akan menyimpan konfigurasi. \\
-    	\indent Hasil yang diharapkan dari pengujian ini adalah sistem memiliki storage yang cukup untuk menyimpan konfigurasi minimal selama satu tahun. 
+    	\indent Hasil yang diharapkan dari pengujian ini adalah sistem memiliki \textit{storage} yang cukup untuk menyimpan konfigurasi minimal selama satu tahun. 
     
 \section{Hasil Uji Coba dan Evaluasi}
 	Berikut ini dijelaskan hasil coba dan evaluasi berdasarkan skenario yang sudah dijelaskan pada subbab sebelumnya.
@@ -172,5 +173,23 @@ Uji coba ini dilakukan untuk menguji fungsionalitas dari sistem yang dibuat tela
 	
    	
     \subsection{Hasil Uji Performa}
-    Berikut ini dijelaskan hasil dari pengujian performa dari sistem yang sudah dibangun.
+    Uji performa dilakukan pada \textit{middleware} sistem. Pengujian dilakukan dengan mengirimkan konfigurasi dari perangkat jaringan menuju \textit{middleware}. Hasil uji coba setelah dilakukan perubahan konfigurasi dari perangkat jaringan dan disimpan di \textit{middleware} dapat dilihat pada Gambar\ref{ukuranRepo}. Rata-rata sotorage yang digunakan untuk setiap perubahan dapat dilihat pada Gambar\ref{Rata-rataperubahan}.
+    	
+    	\begin{figure}[H]
+    	\centering
+    	\includegraphics[width=\textwidth]{Images/C-5/Penggunaan-Storage.png}
+    	\caption{Penggunaan storage repositori}
+    	\label{ukuranRepo}
+    	\end{figure}
+    
+    	\begin{figure}[H]
+	    	\centering
+	    	\includegraphics[width=\textwidth]{Images/C-5/Rata-rata-Ukuran-Perubahan.png}
+	    	\caption{Penggunaan storage repositori}
+	    	\label{Rata-rataperubahan}
+	    \end{figure}
+    
+    \indent Dari grafik tersebut dapat dilihat bahwa penggunaan storage tidak mengalami perbedaan yang banyak. Dapat dilihat bahwa storage yang digunakan berubah linier terhadap jumlah commit (perubahan) yang dilakukan.
+    
+    
     	
