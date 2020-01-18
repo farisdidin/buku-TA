@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  15 JAN 2020 13:48
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  18 JAN 2020 08:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1568,50 +1568,58 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 (Font)              scaled to size 9.22495pt on input line 35.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/n' will be
 (Font)              scaled to size 9.22495pt on input line 35.
-) (./chapters/3-Desain_dan_Perancangan.tex [10]
+ [10]) (./chapters/3-Desain_dan_Perancangan.tex [11] [12
+
+]
 BAB III.
+[13]
 File: Images/C-3/UC-2.png Graphic file (type bmp)
 <Images/C-3/UC-2.png>
-[11
-
-] [12]
+ [14]
 File: Images/C-3/Desain-Umum-TA-4.png Graphic file (type bmp)
 <Images/C-3/Desain-Umum-TA-4.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
-File: Images/C-3/Repository.png Graphic file (type bmp)
-<Images/C-3/Repository.png>
+ [15]
+[16]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/it' will be
+(Font)              scaled to size 11.27493pt on input line 67.
+File: Images/C-3/Repository-Adapter.png Graphic file (type bmp)
+<Images/C-3/Repository-Adapter.png>
+ [17]
+File: Images/C-3/devices-repository.png Graphic file (type bmp)
+<Images/C-3/devices-repository.png>
+ [18]
+File: Images/C-3/AlurPengirimanFile.png Graphic file (type bmp)
+<Images/C-3/AlurPengirimanFile.png>
+File: Images/C-3/Flow-Checkout.png Graphic file (type bmp)
+<Images/C-3/Flow-Checkout.png>
+ [19]
+File: Images/C-3/CreateBranch.png Graphic file (type bmp)
+<Images/C-3/CreateBranch.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/it' will be
-(Font)              scaled to size 11.27493pt on input line 73.
-File: Images/C-3/AlurPengirimanFile.png Graphic file (type bmp)
-<Images/C-3/AlurPengirimanFile.png>
-
-[15]
-File: Images/C-3/CreateBranch.png Graphic file (type bmp)
-<Images/C-3/CreateBranch.png>
+ [20]
 File: Images/C-3/Web_Service.png Graphic file (type bmp)
 <Images/C-3/Web_Service.png>
 
-Underfull \vbox (badness 2343) has occurred while \output is active []
+[21]
+File: Images/C-3/desainui.png Graphic file (type bmp)
+<Images/C-3/desainui.png>
 
- [16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17])
-(./chapters/4-Implementasi.tex [18]
-BAB IV.
-[19
+ [22])
+(./chapters/4-Implementasi.tex [23] [24
 
 ]
+BAB IV.
+[25]
 LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 9.85492pt on input line 35.
- [20] [21]
+ [26] [27]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/n' will be
 (Font)              scaled to size 8.19995pt on input line 109.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
@@ -1619,7 +1627,7 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22]
+ [28]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
 (Font)              scaled to size 9.22495pt on input line 126.
 
@@ -1657,7 +1665,7 @@ Overfull \hbox (3.11319pt too wide) in alignment at lines 135--142
  [] [] [] [] 
  []
 
-[23]
+[29]
 Overfull \hbox (4.92569pt too wide) in paragraph at lines 161--161
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
@@ -1692,7 +1700,7 @@ Overfull \hbox (3.11319pt too wide) in alignment at lines 168--176
  [] [] [] [] 
  []
 
-[24]
+[30]
 Overfull \hbox (4.92569pt too wide) in paragraph at lines 186--186
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
@@ -1727,7 +1735,7 @@ Overfull \hbox (0.17969pt too wide) in alignment at lines 193--201
  [] [] [] [] 
  []
 
-) (./chapters/5-Pengujian_dan_Evaluasi.tex [25] [26
+) (./chapters/5-Pengujian_dan_Evaluasi.tex [31] [32
 
 ]
 BAB V.
@@ -1774,7 +1782,7 @@ Overfull \hbox (8.97124pt too wide) in alignment at lines 17--23
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27]
+ [33]
 Overfull \hbox (4.92569pt too wide) in paragraph at lines 46--46
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
@@ -1829,11 +1837,11 @@ Overfull \hbox (8.97124pt too wide) in alignment at lines 53--60
  [] [] [] [] 
  []
 
-[28] [29]
+[34] [35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30]
-[31]
+ [36]
+[37]
 Overfull \hbox (4.92569pt too wide) in paragraph at lines 98--98
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
@@ -1863,7 +1871,7 @@ Overfull \hbox (3.5636pt too wide) in paragraph at lines 109--109
 [][][][][][][][][][][][]$| 
  []
 
-[32] [33]
+[38] [39]
 Overfull \hbox (4.92569pt too wide) in paragraph at lines 120--120
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
@@ -1908,7 +1916,7 @@ Overfull \hbox (32.41684pt too wide) in alignment at lines 146--150
  [] [] [] [] 
  []
 
-[34]
+[40]
 Overfull \hbox (4.92569pt too wide) in paragraph at lines 158--158
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
@@ -1948,42 +1956,42 @@ File: Images/C-5/Penggunaan-Storage.png Graphic file (type bmp)
 
 Underfull \vbox (badness 1466) has occurred while \output is active []
 
- [35]
+ [41]
 File: Images/C-5/Rata-rata-Ukuran-Perubahan.png Graphic file (type bmp)
 <Images/C-5/Rata-rata-Ukuran-Perubahan.png>
 
-[36]) (./chapters/6-Penutup.tex [37] [38
+[42]) (./chapters/6-Penutup.tex [43] [44
 
 ]
 BAB VI.
-) (./main.bbl [39] [40
+) (./main.bbl [45] [46
 
-] [41]) (./chapters/7-Lampiran_A.tex [42]
+] [47]) (./chapters/7-Lampiran_A.tex [48]
 Lampiran A.
-[43
+[49
 
-]) (./chapters/8-Lampiran_B.tex [44]
+]) (./chapters/8-Lampiran_B.tex [50]
 Lampiran B.
-[45
+[51
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
-[47]
+ [52]
+[53]
 Underfull \vbox (badness 2503) has occurred while \output is active []
 
- [48]
+ [54]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49]
+ [55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50]
+ [56]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51])
-[52]
+ [57])
+[58]
 File: Images/fotoDiri.png Graphic file (type bmp)
 <Images/fotoDiri.png>
 
@@ -1992,7 +2000,7 @@ Overfull \hbox (3.56015pt too wide) in paragraph at lines 59--60
  []
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 64.
-[53
+[59
 
 
 ]
@@ -2006,12 +2014,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 26195 strings out of 493007
- 476151 string characters out of 6136719
- 706557 words of memory out of 5000000
- 29799 multiletter control sequences out of 15000+600000
+ 26210 strings out of 493007
+ 476584 string characters out of 6136719
+ 706745 words of memory out of 5000000
+ 29811 multiletter control sequences out of 15000+600000
  534333 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  46i,12n,67p,10439b,1793s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (77 pages).
+Output written on main.pdf (83 pages).

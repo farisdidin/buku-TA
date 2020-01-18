@@ -28,49 +28,51 @@
 \contentsline {section}{\numberline {2.5}TFTP}{9}{section.2.5}
 \contentsline {section}{\numberline {2.6}FTP}{9}{section.2.6}
 \contentsline {section}{\numberline {2.7}Git}{9}{section.2.7}
-\contentsline {chapter}{\numberline {III}DESAIN DAN PERANCANGAN}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Deskrisi Umum Sistem}{11}{section.3.1}
-\contentsline {section}{\numberline {3.2}Kasus Penggunaan}{11}{section.3.2}
-\contentsline {section}{\numberline {3.3}Arsitektur Sistem}{13}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Desain Umum Sistem}{14}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Perancangan Repositori Perangkat }{15}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Perancangan \textit {Repository Observer}}{15}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Perancangan Manajemen Konsol}{17}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Perancangan Basis Data}{18}{subsection.3.3.5}
-\contentsline {chapter}{\numberline {IV}IMPLEMENTASI}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Lingkungan Implementasi}{19}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Perangkat Keras}{19}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Perangkat Lunak}{19}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Implementasi Repositori Perangkat}{19}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Implementasi Protokol TFTP}{20}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Implementasi Protokol FTP}{20}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Implementasi \textit {Repository Observer}}{22}{section.4.3}
-\contentsline {section}{\numberline {4.4}Implementasi Manajemen Konsol}{23}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Implementasi Flask}{23}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Implementasi Gitea}{24}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Implementasi Skema Basis Data}{25}{subsection.4.4.3}
-\contentsline {chapter}{\numberline {V}PENGUJIAN DAN EVALUASI}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}Lingkungan Uji Coba}{27}{section.5.1}
-\contentsline {section}{\numberline {5.2}Skenario Uji Coba}{28}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Skenario Uji Coba Fungsionalitas}{28}{subsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.1.1}Uji Fungsionalitas \textit {User} Mengelola Repositori}{28}{subsubsection.5.2.1.1}
-\contentsline {subsubsection}{\numberline {5.2.1.2}Uji Fungsionalitas User Mengirim Konfigurasi}{30}{subsubsection.5.2.1.2}
-\contentsline {subsubsection}{\numberline {5.2.1.3}Uji Fungsionalitas \textit {User} Checkout Commit}{31}{subsubsection.5.2.1.3}
-\contentsline {subsubsection}{\numberline {5.2.1.4}Uji Fungsionalitas Unduh Konfigurasi}{31}{subsubsection.5.2.1.4}
-\contentsline {subsubsection}{\numberline {5.2.1.5}Uji Fungsionalitas Percabangan Commit}{31}{subsubsection.5.2.1.5}
-\contentsline {subsection}{\numberline {5.2.2}Skenario Uji Coba Performa}{32}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Hasil Uji Coba dan Evaluasi}{32}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Uji Fungsionalitas}{32}{subsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.1.1}Uji Fungsionalitas User Mengelola Repositori}{32}{subsubsection.5.3.1.1}
-\contentsline {subsubsection}{\numberline {5.3.1.2}Uji Fungsionalitas User Mengirim Konfigurasi}{34}{subsubsection.5.3.1.2}
-\contentsline {subsubsection}{\numberline {5.3.1.3}Uji Fungsionalitas User Checkout Commit}{34}{subsubsection.5.3.1.3}
-\contentsline {subsubsection}{\numberline {5.3.1.4}Uji Fungsionalitas Unduh Konfigurasi}{35}{subsubsection.5.3.1.4}
-\contentsline {subsubsection}{\numberline {5.3.1.5}Uji Fungsionalitas Percabangan Commit}{35}{subsubsection.5.3.1.5}
-\contentsline {subsection}{\numberline {5.3.2}Hasil Uji Performa}{35}{subsection.5.3.2}
-\contentsline {chapter}{\numberline {VI}PENUTUP}{39}{chapter.6}
-\contentsline {section}{\numberline {6.1}Kesimpulan}{39}{section.6.1}
-\contentsline {section}{\numberline {6.2}Saran}{39}{section.6.2}
-\contentsline {chapter}{DAFTAR PUSTAKA}{41}{chapter*.16}
-\contentsline {chapter}{\numberline {A}INSTALASI PERANGKAT LUNAK}{43}{appendix.A}
-\contentsline {chapter}{\numberline {B}KODE SUMBER}{45}{appendix.B}
-\contentsline {chapter}{BIODATA PENULIS}{53}{appendix*.17}
+\contentsline {section}{\numberline {2.8}Gitea}{10}{section.2.8}
+\contentsline {chapter}{\numberline {III}DESAIN DAN PERANCANGAN}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Deskrisi Umum Sistem}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Kasus Penggunaan}{14}{section.3.2}
+\contentsline {section}{\numberline {3.3}Arsitektur Sistem}{16}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Desain Umum Sistem}{16}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Perancangan \textit {Repository Adapter} }{17}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Perancangan Repositori Perangkat}{18}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Perancangan \textit {Repository Observer}}{19}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Perancangan Manajemen Konsol}{21}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.6}Perancangan Basis Data}{23}{subsection.3.3.6}
+\contentsline {chapter}{\numberline {IV}IMPLEMENTASI}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Lingkungan Implementasi}{25}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Perangkat Keras}{25}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Perangkat Lunak}{25}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Implementasi Repositori Perangkat}{25}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Implementasi Protokol TFTP}{26}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Implementasi Protokol FTP}{26}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Implementasi \textit {Repository Observer}}{28}{section.4.3}
+\contentsline {section}{\numberline {4.4}Implementasi Manajemen Konsol}{29}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Implementasi Flask}{29}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Implementasi Gitea}{30}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Implementasi Skema Basis Data}{31}{subsection.4.4.3}
+\contentsline {chapter}{\numberline {V}PENGUJIAN DAN EVALUASI}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}Lingkungan Uji Coba}{33}{section.5.1}
+\contentsline {section}{\numberline {5.2}Skenario Uji Coba}{34}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Skenario Uji Coba Fungsionalitas}{34}{subsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1.1}Uji Fungsionalitas \textit {User} Mengelola Repositori}{34}{subsubsection.5.2.1.1}
+\contentsline {subsubsection}{\numberline {5.2.1.2}Uji Fungsionalitas User Mengirim Konfigurasi}{36}{subsubsection.5.2.1.2}
+\contentsline {subsubsection}{\numberline {5.2.1.3}Uji Fungsionalitas \textit {User} Checkout Commit}{37}{subsubsection.5.2.1.3}
+\contentsline {subsubsection}{\numberline {5.2.1.4}Uji Fungsionalitas Unduh Konfigurasi}{37}{subsubsection.5.2.1.4}
+\contentsline {subsubsection}{\numberline {5.2.1.5}Uji Fungsionalitas Percabangan Commit}{37}{subsubsection.5.2.1.5}
+\contentsline {subsection}{\numberline {5.2.2}Skenario Uji Coba Performa}{38}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Hasil Uji Coba dan Evaluasi}{38}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Uji Fungsionalitas}{38}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Uji Fungsionalitas User Mengelola Repositori}{38}{subsubsection.5.3.1.1}
+\contentsline {subsubsection}{\numberline {5.3.1.2}Uji Fungsionalitas User Mengirim Konfigurasi}{40}{subsubsection.5.3.1.2}
+\contentsline {subsubsection}{\numberline {5.3.1.3}Uji Fungsionalitas User Checkout Commit}{40}{subsubsection.5.3.1.3}
+\contentsline {subsubsection}{\numberline {5.3.1.4}Uji Fungsionalitas Unduh Konfigurasi}{41}{subsubsection.5.3.1.4}
+\contentsline {subsubsection}{\numberline {5.3.1.5}Uji Fungsionalitas Percabangan Commit}{41}{subsubsection.5.3.1.5}
+\contentsline {subsection}{\numberline {5.3.2}Hasil Uji Performa}{41}{subsection.5.3.2}
+\contentsline {chapter}{\numberline {VI}PENUTUP}{45}{chapter.6}
+\contentsline {section}{\numberline {6.1}Kesimpulan}{45}{section.6.1}
+\contentsline {section}{\numberline {6.2}Saran}{45}{section.6.2}
+\contentsline {chapter}{DAFTAR PUSTAKA}{47}{chapter*.19}
+\contentsline {chapter}{\numberline {A}INSTALASI PERANGKAT LUNAK}{49}{appendix.A}
+\contentsline {chapter}{\numberline {B}KODE SUMBER}{51}{appendix.B}
+\contentsline {chapter}{BIODATA PENULIS}{59}{appendix*.20}
