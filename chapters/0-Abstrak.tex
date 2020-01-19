@@ -2,12 +2,17 @@
         Saat ini infrastruktur jaringan semakin kompleks dan terdiri dari banyak perangkat. Seiring dengan perubahan kebutuhan maka pengaturan dari infrastruktur jaringan juga akan selalu berubah. Perangkat jaringan yang ada pada saat ini hanya mampu menyimpan konfigurasi kedalam file tetapi tidak bisa menyimpan perubahan yang sudah dilakukan. Konfigurasi dari perangkat jaringan akan berubah-ubah sesuai dengan kebutuhan infrastruktur jaringan yang ada. Meskipun selalu berubah, tidak menutup kemungkinan kita ingin melihat atau menggunakan konfigurasi yang sudah lama.\\
 		\indent (VCS) Version Control System  merupakan cara yang saat ini umum digunakan untuk mencatat setiap perubahan yang ada pada file sehingga kita dapat melacak perubahan yang ada. VCS akan menyimpan setiap perubahan yang ada pada file dan mencatatnya di dalam database repositori dalam bentuk urutan perubahan dari waktu ke waktu. Salah satu VCS yang sekarang banyak digunakan adalah Git.\\
 		\indent Dalam tugas akhir ini akan dibuat rancangan sebuah sistem yang memungkinkan untuk membuat versioning dari setiap konfigurasi perangkat jaringan menggunakan Git. Sistem ini bisa menyimpan catatan perubahan dari file konfigurasi perangkat jaringan ke dalam server. Jika dibutuhkan versi konfigurasi yang lama, konfigurasi bisa diambil dari catatan perubahan yang disimpan di dalam server.\\
+		\indent Hasil uji coba menunjukkan middleware dapat digunakan untuk melacak perubahan konfigurasi yang disimpan di dalam repositori. Versi yang diunduh kedalam perangkat jaringan dapat ditentukan oleh middleware. Waktu yang diperlukan untuk merubah versi cukup lama bergantung pada jumlah perubahan yang disimpan. Untuk mengatasi hal itu perlu dioptimalkan cara melihat daftar perubahan yang disimpan.
 
 	\noindent \textbf{Kata-Kunci}: version control system, git, versioning.
 \end{abstrak}
 \newpage
 \begin{abstract}
-	
+	Nowadays network infrastructures are more complex and consist of many devices. The configuration of network infrastructure will change depend on organization's requirements. Current network devices only able to save configuration into file but cannot save the changes of the configuration. Sometime we need to rollback to older version of configuration so we need ability to change the configuration as we want.\\
+	\indent (VCS) Version Control System is the common mechanism to save every changes that happen in  a single file. With VCS we will able to track the version of a file. VCS wil save the changes of file into repository's database. One of VCS that mostly used is Git.\\ 
+	\indent This final project will make tools that able to make a versioning of network devices configuration with Git. System will able to save changing record of a file configuration into a server. When network devices need older version of configuration network devices can download configuration from the system.
+	\indent The trial results show middleware can be used to track configuration changes that are stored in the repository. The version downloaded to the network device can be determined by the middleware. The amount of time needed to change the version depends on the number of changes saved. The ammount of time to show all list changes are quiet long, to overcome this middleware need to be optimized on how to see a list of changes that are saved.
 
 	\noindent \textbf{Kata-Kunci}: version control system, git, versioning.
 \end{abstract}
+	

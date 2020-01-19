@@ -4,13 +4,13 @@
     \section{Deskrisi Umum Sistem}
     	Sistem yang akan dibuat dalam tugas akhir ini adalah sistem yang digunakan untuk melacak perubahan konfigurasi perangkat jaringan. Sistem terhubung dengan perangkat jaringan dan menyimpan semua versi perubahan dari file konfigurasi perangkat jaringan. Sistem bisa mengatur versi konfigurasi yang dibutuhkan oleh perangkat jaringan untuk dipasang pada perangkat jaringan.
     	
-    	\indent Sistem memiliki \textit{repository adapter} yang berfungsi untuk menerima file konfigurasi yang dikirim dari perangkat jaringan yang terhubung. Perangkat jaringan mengirimkan file konfigurasi menggunakan protokol pengiriman yang didukung seperti FTP, TFTP, dan SCP. Untuk menyimpan perubahan dari konfigurasi sistem memiliki repositori git untuk menyimpan setiap catatan perubahan yang terjadi pada konfigurasi. Setiap perangkat yang terhubung akan disediakan repositori git untuk masing-masing perangkat. Sistem juga memiliki \textit{repository observer} yang berfungsi untuk melihat setiap perubahan yang terjadi pada konfigurasi perangkat jaringan, setiap ada perubahan maka sistem akan otomatis mencatat perubahan ke dalam repositori git.
+    	\indent Sistem memiliki \textit{repository adapter} yang berfungsi untuk menerima file konfigurasi yang dikirim dari perangkat jaringan yang terhubung. Perangkat jaringan mengirimkan file konfigurasi menggunakan protokol pengiriman yang didukung seperti FTP, TFTP, dan SCP. Untuk menyimpan perubahan dari konfigurasi, sistem memiliki repositori git yang berfungsi menyimpan setiap catatan perubahan yang terjadi pada konfigurasi. Setiap perangkat yang terhubung akan disediakan repositori git untuk masing-masing perangkat. Sistem juga memiliki \textit{repository observer} yang berfungsi untuk melihat setiap perubahan yang terjadi pada konfigurasi perangkat jaringan, setiap ada perubahan maka sistem akan otomatis mencatat perubahan ke dalam repositori git.
     	
     	\indent Di dalam sistem terdapat dua manajemen konsol yang digunakan yaitu Gitea dan Flask. Manajemen konsol tersebut digunakan untuk menerjemahkan instruksi dari administrator kepada sistem sesuai dengan diagram penggunaan pada Gambar \ref{usecase}.
     	
     	\indent Sistem menggunakan basisdata untuk menyimpan data perangkat yang terhubung. Basis data yang digunakan adalah basisdata mysql.
     	
-    	\indent Proses penyimpanan konfigurasi dimulai dengan administratur mengirim konfigurasi dari perangkat jaringan menuju sistem. Sistem menerima \textit{file} konfigurasi kemudian mencatat perubahan ke dalam \textit{git repository}. Perubahan disimpan pada \textit{local repository} dan \textit{remote repostory}.
+    	\indent Proses penyimpanan konfigurasi dimulai dengan administrator mengirim konfigurasi dari perangkat jaringan menuju sistem. Sistem menerima \textit{file} konfigurasi kemudian mencatat perubahan ke dalam \textit{git repository}. Perubahan disimpan pada \textit{local repository} dan \textit{remote repostory}.
 	
     \section{Kasus Penggunaan}
     	Dalam sistem ini hanya ada satu aktor yaitu \textit{administrator} jaringan yang akan mengatur penyimpanan konfigurasi. Terdapat lima fitur utama yang bisa digunakan dalam sistem. Diagram kasus penggunaan sistem pelacakan konfigurasi dapat dilihat pada Gambar \ref{usecase}.
@@ -46,7 +46,7 @@
 		    \end{longtable}
 
 	\section{Arsitektur Sistem}
-		Pada sub-bab ini, dibahas mengenai tahap analisis dan kebutuhan bisnis dan desain dari sistem yang akan dibangun. Arsitektur sistem secara umum ditunjukkan pada Gambar \ref{DesainUmumSistem}.\\
+		Pada sub-bab ini, dibahas mengenai tahap analisis dan kebutuhan bisnis serta desain dari sistem yang akan dibangun. Arsitektur sistem secara umum ditunjukkan pada Gambar \ref{DesainUmumSistem}.\\
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=\textwidth]{Images/C-3/Desain-Umum-TA-4.png}
@@ -59,7 +59,7 @@
 			\begin{enumerate}
 				\item \textit{Repository Adapter} untuk menerima konfigurasi yang dikirim dari perangkat jaringan.
 				\item Repositori Perangkat untuk menyimpan file konfigurasi dari perangkat jaringan.
-				\item \textit{Repository Observer} untuk melihat perubahan file yang disimpan di dalam repository server.
+				\item \textit{Repository Observer} untuk melihat perubahan file yang disimpan di dalam repositori perangkat.
 				\item Manajemen Konsol untuk menerjemahkan intruksi dari admin kepada sistem.
 			\end{enumerate}
                 
@@ -72,7 +72,8 @@
 				\label{DesainRepositoriadapter}
 			\end{figure}
 			\textit{Repository adapter} adalah komponen untuk menerima file konfigurasi yang dikirim dari perangkat jaringan menuju sistem. Sistem dapat menerima pengiriman konfigurasi melalui protokol pengiriman TFTP, FTP, dan SCP. Di dalam \textit{repository adapter} setiap perangkat jaringan yang terhubung memiliki direktori masing-masing. Setiap direktori dikondisikan mampu untuk menerima pengiriman konfigurasi dari \textit{multi-protocol} sehingga perangkat jaringan tidak terbatas satu protokol saja dalam mengirim konfigurasi.\\
-			\indent Setelah file konfigurasi diterima oleh \textit{repository adapter} kemudian file konfigurasi dipindahkan ke repositori perangkat. Kemudian di dalam komponen repositori perangkat perubahan file konfigurasi akan dicatat.
+			\indent Di dalam \textit{repository adapter} terdapat komponen \textit{repository observer} yang berfungsi untum melihat file yang dikirim dari perangkat jaringan. Ketika ada file konfigurasi masuk maka \textit{repository observer} akan otomatis memindahkan file konfigurasi ke dalam repositori perangkat.\\
+			\indent Setelah file konfigurasi dipindahkan perubahan file konfigurasi dicatat oleh komponen repositori perangkat. 
 			
 		\subsection{Perancangan Repositori Perangkat}
 		\begin{figure}[H]
@@ -90,7 +91,7 @@
             Pada sistem ini \textit{Middleware} harus bisa mengamati repositori perangkat jaringan secara berkelanjutan dan melakukan update pada \textit{history} commit pada repositori. Untuk melakukan hal tersebut modul watchdog di dalam \textit{middleware} yang akan melihat setiap perubahan pada respositori perangkat jaringan. Modul watchdog berjalan sebagai thread yang menunggu perubahan kondisi di dalam repositori. Ketika thread mengidentifikasi ada perubahan di dalam repositori maka thread akan menjalankan perintah commit menggunakan modul gitPython yang terintegrasi dengan middleware. Alur dari repository observer dalam mencatat perubahan dapat dilihat pada gambar\ref{desain_pengirimanfile}.
             \begin{figure}[H]
             	\centering
-            	\includegraphics[width=10cm,height=1cm]{Images/C-3/AlurPengirimanFile.png}
+            	\includegraphics[width=9.5cm,height=5cm]{Images/C-3/AlurPengirimanFile.png}
             	\caption{Alur pengiriman file}
             	\label{desain_pengirimanfile}
             \end{figure}
@@ -115,7 +116,7 @@
         	\indent Terdapat dua manajemen konsol yang digunakan dalam sistem pelacakan konfigurasi perangkat jaringan yakni Gitea \textit{webapp} dan Flask. Flask digunakan untuk menampilkan \textit{user interface} dari sistem, akan tetapi flask memiliki keterbatasan dalam fitur melihat isi file konfigurasi dan melihat diff commit atau perbedaan antara commit. Untuk mengatasi permasalahan tersebut maka digunakan Gitea webapp untuk melihat isi file dan perbedaan antara commit.   
          	\begin{figure}[H]
          		\centering
-         		\includegraphics[width=\textwidth]{Images/C-3/Web_Service.png}
+         		\includegraphics[width=\textwidth]{Images/C-3/Manajemen-Konsol.png}
          		\caption{Perancangan manajemen konsol}
          		\label{ManajemenKonsol}
          	\end{figure}

@@ -4,14 +4,21 @@
 	\section{Kesimpulan}
         Dari proses perencangan, implementasi dan pengujian terhadap sistem, dapat diambil beberapa kesimpulan berikut:
 		\begin{enumerate}
-			\item Sistem dapat menyimpan konfigurasi perangkat jaringan.
-			\item Sistem dapat menerima konfigurasi dari protokol FTP, TFTP, dan SCP.
-            \item Sistem ini dapat digunakan untuk menyimpan perangkat jaringan yang dikelola oleh DPTSI ITS.
+			\item Sistem dapat menyimpan konfigurasi perangkat jaringan di dalam direktori yang dibedakan berdasarkan nama perangkat jaringan yang sudah ditentukan.
+			\item Sistem dapat menerima konfigurasi yang dikirim dari perangkat jaringan melalui protokol FTP, TFTP, dan SCP menyesuaikan protokol yang didukung perangkat jaringan.
             \item Kebutuhan storage untuk menyimpan linier dengan jumlah perubahan yang dilakukan.
+            \item Sistem mengecek perubahan konfigurasi yang disimpan di dalam repositori menggunakan modul \textit{python wathdog}.
+            \item Sistem dapat digunakan untuk merubah versi konfigurasi yang disimpan.
+            \item Konfigurasi yang disimpan dalam sistem dapat diunduh kembali oleh perangkat jaringan setelah versinya dirubah.
+            \item Sistem dapat digunakan untuk melihat perbedaan versi satu dengan yang lainnya.
+            \item Waktu yang dieperlukan untuk memindah versi bergantung kepada jumlah perubahan yang disimpan.
 		\end{enumerate}
         
 	\section{Saran}
 		Berikut beberapa saran yang diberikan untuk pengembangan lebih lanjut:
 		\begin{enumerate}
-			\item Sistem ini perlu diperbaiki di bagian manajemen konsol. 
+			\item Path atau url untuk mengunduh konfigurasi dijadikan sama dengan path untuk mengunggah konfigurasi.
+			\item Ditambahkan fitur untuk melihat struktur tree dari catatan commit sehingga memudahkan meliaht daftar perubahan ketika memiliki cabang lebih dari satu.
+			\item Melakukan optimasi waktu yang diperlukan untuk merubah versi konfigurasi yang disimpan.
+			\item Manajemen konsol yang menggunakan dua macam tampilan dijadikan satu macam tampilan.
 		\end{enumerate}

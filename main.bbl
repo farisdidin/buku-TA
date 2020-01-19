@@ -21,13 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{git_workflow}
-\BIBentryALTinterwordspacing
-``Subversion,'' 23 Desember 2019. [Daring]. Tersedia pada:
-  \url{https://polyawesomism.wordpress.com/tag/subversion/}. [Diakses: 23
-  Desember 2019].
-\BIBentrySTDinterwordspacing
-
 \bibitem{versioning_popularity}
 \BIBentryALTinterwordspacing
 ``Compare repositories,'' 5 Agustus 2019. [Daring]. Tersedia pada:
@@ -83,6 +76,13 @@ N.~Udayakumar, A.~Khera, L.~Suri, C.~Gupta, dan T.~Subbulakshmi, ``Bandwidth
 \BIBentryALTinterwordspacing
 ``About - git,'' 22 Desember 2019. [Daring]. Tersedia pada:
   \url{https://git-scm.com}. [Diakses: 22 Desember 2019].
+\BIBentrySTDinterwordspacing
+
+\bibitem{git_workflow}
+\BIBentryALTinterwordspacing
+``Subversion,'' 23 Desember 2019. [Daring]. Tersedia pada:
+  \url{https://polyawesomism.wordpress.com/tag/subversion/}. [Diakses: 23
+  Desember 2019].
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
