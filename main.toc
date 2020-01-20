@@ -76,4 +76,4 @@
 \contentsline {chapter}{DAFTAR PUSTAKA}{51}{chapter*.21}
 \contentsline {chapter}{\numberline {A}INSTALASI PERANGKAT LUNAK}{53}{appendix.A}
 \contentsline {chapter}{\numberline {B}KODE SUMBER}{55}{appendix.B}
-\contentsline {chapter}{BIODATA PENULIS}{63}{appendix*.22}
+\contentsline {chapter}{BIODATA PENULIS}{67}{appendix*.22}

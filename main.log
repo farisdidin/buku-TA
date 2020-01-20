@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  20 JAN 2020 00:34
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  20 JAN 2020 08:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1953,10 +1953,7 @@ Overfull \hbox (29.48782pt too wide) in alignment at lines 172--176
  [] [] [] [] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [43]
+[43]
 Overfull \hbox (4.92569pt too wide) in paragraph at lines 186--186
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
@@ -1991,24 +1988,19 @@ Overfull \hbox (14.83376pt too wide) in alignment at lines 192--196
  [] [] [] [] 
  []
 
+[44]
 File: Images/C-5/Penggunaan-Storage.png Graphic file (type bmp)
 <Images/C-5/Penggunaan-Storage.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [44]
 File: Images/C-5/Rata-rata-Ukuran-Perubahan.png Graphic file (type bmp)
 <Images/C-5/Rata-rata-Ukuran-Perubahan.png>
-File: Images/C-5/Response-Time.png Graphic file (type bmp)
-<Images/C-5/Response-Time.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [45]
-Underfull \vbox (badness 3503) has occurred while \output is active []
+File: Images/C-5/Response-Time.png Graphic file (type bmp)
+<Images/C-5/Response-Time.png>
 
- [46])
-(./chapters/6-Penutup.tex [47] [48
+[46]) (./chapters/6-Penutup.tex [47] [48
 
 ]
 BAB VI.
@@ -2042,8 +2034,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [60]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [61])
+ [61]
+Overfull \hbox (69.89116pt too wide) in paragraph at lines 230--231
+[][] 
+ []
+
 [62]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64])
+[65] [66
+
+]
 File: Images/fotoDiri.png Graphic file (type bmp)
 <Images/fotoDiri.png>
 
@@ -2052,8 +2057,7 @@ Overfull \hbox (3.56015pt too wide) in paragraph at lines 59--60
  []
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 64.
-[63
-
+[67
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
@@ -2066,12 +2070,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 26221 strings out of 493007
- 476875 string characters out of 6136719
- 707013 words of memory out of 5000000
- 29821 multiletter control sequences out of 15000+600000
+ 26222 strings out of 493007
+ 476885 string characters out of 6136719
+ 716064 words of memory out of 5000000
+ 29822 multiletter control sequences out of 15000+600000
  534325 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  46i,12n,67p,10439b,1793s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (87 pages).
+Output written on main.pdf (91 pages).
