@@ -82,27 +82,28 @@
 			\caption{Desain repositori perangkat}
 			\label{DesainRepositoriPerangkat}
 		\end{figure}
-			Repositori perangkat merupakan komponen untuk mencatat seluruh perubahan yang dilakukan pada file konfigurasi. Repositori perangkat berupa direktori yang berperan sebagai repoitori git. Setiap ada konfigurasi yang dikirim dari perangkat jaringan, konfigurasi akan diterima oleh \textit{repository adapter} kemudian dipindahkan ke dalam repositori perangkat untuk dicatat perubahannya menggunakan git. Di dalam repositori perangkat terdapat dua macam repositori git yakni \textit{local repository} dan \textit{remote repository}. Local repository terhubung dengan manajemen konsol yang berbasis Flask. \textit{Remote repository} terhubung dengan manajemen konsol berbasis gitea. \\
-			\indent Di dalam repositori perangkat terdapat terdapat komponen \textit{repository observer} yang melihat perubahan file konfigurasi. Setiap ada file konfigurasi yang dipindahkan dari \textit{repository adapter} maka akan diidentfikasi sebagai perubahan konfigurasi di dalam repositori perangkat.
+			Repositori perangkat merupakan komponen untuk mencatat seluruh perubahan yang dilakukan pada file konfigurasi. Repositori perangkat berupa direktori yang berperan sebagai repositori git. Setiap ada konfigurasi yang dikirim dari perangkat jaringan, konfigurasi akan diterima oleh \textit{repository adapter} kemudian dipindahkan ke dalam repositori perangkat untuk dicatat perubahannya menggunakan git. Di dalam repositori perangkat terdapat dua macam repositori git yakni \textit{local repository} dan \textit{remote repository}. Local repository terhubung dengan manajemen konsol yang berbasis Flask. \textit{Remote repository} terhubung dengan manajemen konsol berbasis gitea. \\
+			\indent Di dalam repositori perangkat terdapat terdapat komponen \textit{repository observer} yang melihat perubahan file konfigurasi. Setiap ada file konfigurasi yang dipindahkan dari \textit{repository adapter} maka akan diidentifikasi sebagai perubahan konfigurasi di dalam repositori perangkat. Ketika ada perubahan dalam repositori perangkat maka perubahan akan otomatis disimpan ke dalam repositori git.
 
 		
             
         \subsection{Perancangan \textit{Repository Observer}}
-            Pada sistem ini \textit{Middleware} harus bisa mengamati repositori perangkat jaringan secara berkelanjutan dan melakukan update pada \textit{history} commit pada repositori. Untuk melakukan hal tersebut modul watchdog di dalam \textit{middleware} yang akan melihat setiap perubahan pada respositori perangkat jaringan. Modul watchdog berjalan sebagai thread yang menunggu perubahan kondisi di dalam repositori. Ketika thread mengidentifikasi ada perubahan di dalam repositori maka thread akan menjalankan perintah commit menggunakan modul gitPython yang terintegrasi dengan middleware. Alur dari repository observer dalam mencatat perubahan dapat dilihat pada gambar\ref{desain_pengirimanfile}.
+            Pada sistem ini \textit{Middleware} harus bisa mengamati repositori perangkat jaringan secara berkelanjutan dan melakukan update pada \textit{history} commit pada repositori. Untuk melakukan hal tersebut modul watchdog di dalam \textit{middleware} yang akan melihat setiap perubahan pada respositori perangkat jaringan. Modul watchdog berjalan sebagai thread yang menunggu perubahan kondisi di dalam repositori. Ketika thread mengidentifikasi ada perubahan di dalam repositori maka thread akan menjalankan perintah commit menggunakan modul gitPython di dalam \textit{middleware} untuk menyimpan perubahan ke dalam repositori git. Alur dari \textit{repository observer} dalam mencatat perubahan dapat dilihat pada Gambar \ref{desain_pengirimanfile}.
             \begin{figure}[H]
             	\centering
-            	\includegraphics[width=9.5cm,height=5cm]{Images/C-3/AlurPengirimanFile.png}
+            	\includegraphics[width=\textwidth]{Images/C-3/AlurPengirimanFile.png}
             	\caption{Alur pengiriman file}
             	\label{desain_pengirimanfile}
             \end{figure}
-        	\indent Salah satu fungsi yang ada dalam sistem adalah fungsi \textit{checkout commit} atau pindah versi konfigurasi. Untuk menjalankan fungsi tersebut \textit{repository observer} harus berhenti sementara waktu hinnga posisi head berubah. Setelah posisi head berubah repository observer dijalankan kembali. Hal ini dilakukan agar proses perpindahan versi tidak dianggap perubahan baru yang menyebabkan ada commit baru pada repository. Alur proses checkout dapat dilihat pada gambar \ref{CheckoutBranch}.
+        	\indent Salah satu fungsi yang ada dalam sistem adalah fungsi \textit{checkout commit} atau pindah versi konfigurasi. Untuk menjalankan fungsi tersebut \textit{repository observer} harus berhenti sementara waktu hingga posisi head (versi sekarang) berubah. Hal ini dilakukan agar proses perpindahan versi tidak dianggap perubahan baru yang menyebabkan ada commit baru pada repository. Setelah posisi head berubah \textit{repository observer} dijalankan kembali untuk mengawasi perubahan dalam repositori.  Alur proses checkout dapat dilihat pada Gambar \ref{CheckoutBranch}.
         	 \begin{figure}[H]
         		\centering
-        		\includegraphics[width=10cm,height=5cm]{Images/C-3/Flow-Checkout.png}
+        		\includegraphics[width=3cm]{Images/C-3/Flow-Pemindahan-Versi.png}
         		\caption{Alur pemindahan versi}
         		\label{CheckoutBranch}
         	\end{figure}
-	        \indent Repository Observer juga mengatur pembentukan cabang dari repositori penyimpanan konfigurasi perangkat jaringan. Pembuatan cabang dalam \textit{history} commit diperlukan ketika posisi versi bukan merupakan versi dari perubahan terakhir dalam repositori. Alur pembuatan cabang dari repositori seperti pada gambar \ref{CreateBranch}.
+        	\newpage
+	        \indent Repository Observer juga mengatur pembentukan cabang dari daftar perubahan repositori konfigurasi perangkat jaringan. Pembuatan cabang dalam \textit{history} commit diperlukan ketika posisi versi bukan merupakan versi dari perubahan terakhir dalam repositori. Alur pembuatan cabang dari repositori seperti pada Gambar \ref{CreateBranch}.
 	        \begin{figure}[H]
 	        	\centering
 	        	\includegraphics[width=\textwidth]{Images/C-3/CreateBranch.png}
@@ -110,7 +111,7 @@
 	        	\label{CreateBranch}
 	        \end{figure}
         
-        
+        \newpage
         \subsection{Perancangan Manajemen Konsol}
         	Dalam sistem yang dibangun, manajemen konsol digunakan untuk menerjemahkan permintaan dari adiministrator jaringan. Manajemen konsol memiliki antarmuka dan rute dengan parameter nama repositori dan permintaan fitur yang diinginkan. Setiap rute akan diproses oleh \textit{Middleware} dan kemudian mengirimkan respon kepada administrator.\\
         	\indent Terdapat dua manajemen konsol yang digunakan dalam sistem pelacakan konfigurasi perangkat jaringan yakni Gitea \textit{webapp} dan Flask. Flask digunakan untuk menampilkan \textit{user interface} dari sistem, akan tetapi flask memiliki keterbatasan dalam fitur melihat isi file konfigurasi dan melihat diff commit atau perbedaan antara commit. Untuk mengatasi permasalahan tersebut maka digunakan Gitea webapp untuk melihat isi file dan perbedaan antara commit.   
@@ -121,7 +122,7 @@
          		\label{ManajemenKonsol}
          	\end{figure}
          	
-         	Desain tampilan web untuk manajemen Konsol dapat dilihat pada gambar\ref{ManajemenKonsolUI}.
+         	Desain tampilan web untuk manajemen Konsol dapat dilihat pada Gambar \ref{ManajemenKonsolUI}.
          		\begin{figure}[H]
          		\centering
          		\includegraphics[width=\textwidth]{Images/C-3/desainui.png}

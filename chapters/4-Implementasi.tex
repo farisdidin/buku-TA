@@ -98,7 +98,7 @@
     \end{lstlisting}
     
     \section{Implementasi Repositori Perangkat}
-    Komponen repositori perangkat digunakan untuk menyimpan catatan perubahan file konfigurasi perangkat jaringan. Untuk menyiapkan komponen repositori perangkat pertama-tama install git. Instalasi git dapat dilihat pada lampiran \ref{installGit}. Komponen repossitori perangkat berjalan pada direktori \path{/home/didin/REPO/downloads}. Direktori tersebut dikondisikan untuk bisa diakses menggunakan TFTP, FTP, dan SCP karena dibutuhkan agar perangkat jaringan bisa mengunduh file konfigurasi dari sistem.
+    Komponen repositori perangkat digunakan untuk menyimpan catatan perubahan file konfigurasi perangkat jaringan. Untuk menyiapkan komponen repositori perangkat pertama-tama install git. Instalasi git dapat dilihat pada Lampiran \ref{installGit}. Komponen repossitori perangkat berjalan pada direktori \path{/home/didin/REPO/downloads}. Direktori tersebut dikondisikan untuk bisa diakses menggunakan TFTP, FTP, dan SCP karena dibutuhkan agar perangkat jaringan bisa mengunduh file konfigurasi dari sistem.
    
    	\section{Implementasi \textit{Repository Observer}}
    		\textit{Middleware} memiliki tugas untuk mencatat setiap perubahan yang terjadi pada file konfigurasi. Perubahan file konfigurasi terjadi ketika perangkat jaringan mengirim file konfigurasi menuju \textit{middleware}. Untuk mengamati perubahan dalam direktori terdapat \textit{Repository Observer} dalam bentuk thread. Untuk membuat \textit{repository observer} ada beberapa tahap yang diperlukan yakni pemasangan bahasa python dan modul-modul yang diperlukan kemudian pembuatan program untuk menjalankan \textit{thread repository observer}. Perangkat lunak yang diperlukan untuk dipasang adalah:
@@ -134,7 +134,7 @@
    		Berikut rute yang disediakan oleh Flask \ref{tabelRuteFlaskApi}.
    		\begin{longtable}{|p{0.03\textwidth}|p{0.27\textwidth}|p{0.13\textwidth}|p{0.41\textwidth}|}
    			
-   			\caption{Tabel rute manajemen konsol flask} \label{tabelRuteFlaskApi} \\
+   			\caption{Rute manajemen konsol flask} \label{tabelRuteFlaskApi} \\
    			\hline
    			\textbf{No} & \textbf{Rute} & \textbf{\textit{Method}} & \textbf{Keterangan} \\ \hline
    			\endfirsthead
@@ -168,7 +168,7 @@
    		
    	\begin{longtable}{|p{0.03\textwidth}|p{0.27\textwidth}|p{0.13\textwidth}|p{0.41\textwidth}|}
    		
-   		\caption{Tabel rute manajemen konsol gitea} \label{tabelRuteWebGitea} \\
+   		\caption{Rute manajemen konsol gitea} \label{tabelRuteWebGitea} \\
    		\hline
    		\textbf{No} & \textbf{Rute} & \textbf{\textit{Method}} & \textbf{Keterangan} \\ \hline
    		\endfirsthead
@@ -179,11 +179,10 @@
    		\endfoot
    		\endlastfoot
    			
-   			1 & \url{/user/sign_up} & Post & Membuat user untuk administrator. \\ \hline
-			2 & \url{/user/login} & Post & Login user administrator. \\ \hline
-			3 & \url{/repo/create} & Post & Membuat repositori Gitea. \\ \hline 
-			4 & \url{/{username}/{reponame}} & Get & Menampilkan repositori dari user.\\ \hline
-			5 & \url{/{username}/{reponame}/commits/branch/{namabranch}} & Get & Menampilkan commit pada repositori.\\ \hline		
+   			
+			1 & \url{/{username}/{reponame}} & Get & Menampilkan repositori dari user.\\ \hline
+			2 & \url{/{username}/{reponame}/commits/branch/{namabranch}} & Get & Menampilkan commit pada repositori.\\ \hline
+			3 & \url{{username}/{reponame}/commit/{hash_commit}} & Get & Menampilkan perbedaan commit. \\ \hline		
    			
    		\end{longtable}
    	

@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Rumusan Masalah}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Batasan Masalah}{2}{section.1.3}
-\contentsline {section}{\numberline {1.4}Tujuan}{2}{section.1.4}
+\contentsline {section}{\numberline {1.4}Tujuan}{3}{section.1.4}
 \contentsline {section}{\numberline {1.5}Manfaat}{3}{section.1.5}
 \contentsline {section}{\numberline {1.6}Metodologi}{3}{section.1.6}
 \contentsline {subsection}{\numberline {1.6.1}Penyusunan Proposal Tugas Akhir}{3}{subsection.1.6.1}
@@ -27,7 +27,7 @@
 \contentsline {section}{\numberline {2.4}Python Watchdog}{8}{section.2.4}
 \contentsline {section}{\numberline {2.5}TFTP}{9}{section.2.5}
 \contentsline {section}{\numberline {2.6}FTP}{9}{section.2.6}
-\contentsline {section}{\numberline {2.7}Git}{9}{section.2.7}
+\contentsline {section}{\numberline {2.7}Git}{10}{section.2.7}
 \contentsline {section}{\numberline {2.8}Gitea}{10}{section.2.8}
 \contentsline {chapter}{\numberline {III}DESAIN DAN PERANCANGAN}{13}{chapter.3}
 \contentsline {section}{\numberline {3.1}Deskrisi Umum Sistem}{13}{section.3.1}
@@ -37,7 +37,7 @@
 \contentsline {subsection}{\numberline {3.3.2}Perancangan \textit {Repository Adapter} }{17}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Perancangan Repositori Perangkat}{18}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}Perancangan \textit {Repository Observer}}{19}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Perancangan Manajemen Konsol}{22}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.5}Perancangan Manajemen Konsol}{23}{subsection.3.3.5}
 \contentsline {subsection}{\numberline {3.3.6}Perancangan Basis Data}{24}{subsection.3.3.6}
 \contentsline {chapter}{\numberline {IV}IMPLEMENTASI}{25}{chapter.4}
 \contentsline {section}{\numberline {4.1}Lingkungan Implementasi}{25}{section.4.1}
@@ -56,24 +56,24 @@
 \contentsline {section}{\numberline {5.1}Lingkungan Uji Coba}{35}{section.5.1}
 \contentsline {section}{\numberline {5.2}Skenario Uji Coba}{36}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Skenario Uji Coba Fungsionalitas}{37}{subsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.1.1}Uji Fungsionalitas \textit {User} Mengelola Repositori}{37}{subsubsection.5.2.1.1}
-\contentsline {subsubsection}{\numberline {5.2.1.2}Uji Fungsionalitas User Mengirim Konfigurasi}{38}{subsubsection.5.2.1.2}
-\contentsline {subsubsection}{\numberline {5.2.1.3}Uji Fungsionalitas \textit {User} Merubah Versi}{39}{subsubsection.5.2.1.3}
-\contentsline {subsubsection}{\numberline {5.2.1.4}Uji Fungsionalitas Unduh Konfigurasi}{39}{subsubsection.5.2.1.4}
+\contentsline {subsubsection}{\numberline {5.2.1.1}Uji Fungsionalitas User Mengirim Konfigurasi}{37}{subsubsection.5.2.1.1}
+\contentsline {subsubsection}{\numberline {5.2.1.2}Uji Fungsionalitas Unduh Konfigurasi}{37}{subsubsection.5.2.1.2}
+\contentsline {subsubsection}{\numberline {5.2.1.3}Uji Fungsionalitas \textit {User} Mengelola Repositori}{38}{subsubsection.5.2.1.3}
+\contentsline {subsubsection}{\numberline {5.2.1.4}Uji Fungsionalitas \textit {User} Merubah Versi}{39}{subsubsection.5.2.1.4}
 \contentsline {subsubsection}{\numberline {5.2.1.5}Uji Fungsionalitas Percabangan Commit}{40}{subsubsection.5.2.1.5}
 \contentsline {subsection}{\numberline {5.2.2}Skenario Uji Coba Performa}{40}{subsection.5.2.2}
 \contentsline {section}{\numberline {5.3}Hasil Uji Coba dan Evaluasi}{41}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Uji Fungsionalitas}{41}{subsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.1.1}Uji Fungsionalitas User Mengelola Repositori}{41}{subsubsection.5.3.1.1}
-\contentsline {subsubsection}{\numberline {5.3.1.2}Uji Fungsionalitas User Mengirim Konfigurasi}{42}{subsubsection.5.3.1.2}
-\contentsline {subsubsection}{\numberline {5.3.1.3}Uji Fungsionalitas \textit {User} Merubah Versi}{43}{subsubsection.5.3.1.3}
-\contentsline {subsubsection}{\numberline {5.3.1.4}Uji Fungsionalitas Unduh Konfigurasi}{43}{subsubsection.5.3.1.4}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Uji Fungsionalitas User Mengirim Konfigurasi}{41}{subsubsection.5.3.1.1}
+\contentsline {subsubsection}{\numberline {5.3.1.2}Uji Fungsionalitas Unduh Konfigurasi}{41}{subsubsection.5.3.1.2}
+\contentsline {subsubsection}{\numberline {5.3.1.3}Uji Fungsionalitas User Mengelola Repositori}{42}{subsubsection.5.3.1.3}
+\contentsline {subsubsection}{\numberline {5.3.1.4}Uji Fungsionalitas \textit {User} Merubah Versi}{43}{subsubsection.5.3.1.4}
 \contentsline {subsubsection}{\numberline {5.3.1.5}Uji Fungsionalitas Percabangan Commit}{44}{subsubsection.5.3.1.5}
 \contentsline {subsection}{\numberline {5.3.2}Hasil Uji Performa}{44}{subsection.5.3.2}
-\contentsline {chapter}{\numberline {VI}PENUTUP}{49}{chapter.6}
-\contentsline {section}{\numberline {6.1}Kesimpulan}{49}{section.6.1}
-\contentsline {section}{\numberline {6.2}Saran}{50}{section.6.2}
-\contentsline {chapter}{DAFTAR PUSTAKA}{51}{chapter*.21}
-\contentsline {chapter}{\numberline {A}INSTALASI PERANGKAT LUNAK}{53}{appendix.A}
-\contentsline {chapter}{\numberline {B}KODE SUMBER}{55}{appendix.B}
-\contentsline {chapter}{BIODATA PENULIS}{67}{appendix*.22}
+\contentsline {chapter}{\numberline {VI}PENUTUP}{47}{chapter.6}
+\contentsline {section}{\numberline {6.1}Kesimpulan}{47}{section.6.1}
+\contentsline {section}{\numberline {6.2}Saran}{47}{section.6.2}
+\contentsline {chapter}{DAFTAR PUSTAKA}{49}{chapter*.20}
+\contentsline {chapter}{\numberline {A}INSTALASI PERANGKAT LUNAK}{51}{appendix.A}
+\contentsline {chapter}{\numberline {B}KODE SUMBER}{53}{appendix.B}
+\contentsline {chapter}{BIODATA PENULIS}{65}{appendix*.21}

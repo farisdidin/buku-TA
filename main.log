@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  20 JAN 2020 08:18
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.5.29)  20 JAN 2020 23:14
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1565,14 +1565,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 BAB II.
 [7
 
-] [8] [9]
+] [8]
+Underfull \vbox (badness 3240) has occurred while \output is active []
+
+ [9]
 File: Images/C-2/Git_workflow.png Graphic file (type bmp)
 <Images/C-2/Git_workflow.png>
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 (Font)              scaled to size 9.22495pt on input line 35.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/n' will be
 (Font)              scaled to size 9.22495pt on input line 35.
- [10]) (./chapters/3-Desain_dan_Perancangan.tex [11] [12
+
+[10]) (./chapters/3-Desain_dan_Perancangan.tex [11] [12
 
 ]
 BAB III.
@@ -1601,29 +1605,24 @@ File: Images/C-3/AlurPengirimanFile.png Graphic file (type bmp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-File: Images/C-3/Flow-Checkout.png Graphic file (type bmp)
-<Images/C-3/Flow-Checkout.png>
+File: Images/C-3/Flow-Pemindahan-Versi.png Graphic file (type bmp)
+<Images/C-3/Flow-Pemindahan-Versi.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
-File: Images/C-3/CreateBranch.png Graphic file (type bmp)
-<Images/C-3/CreateBranch.png>
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21]
-File: Images/C-3/Manajemen-Konsol.png Graphic file (type bmp)
-<Images/C-3/Manajemen-Konsol.png>
+File: Images/C-3/CreateBranch.png Graphic file (type bmp)
+<Images/C-3/CreateBranch.png>
 
 [22]
+File: Images/C-3/Manajemen-Konsol.png Graphic file (type bmp)
+<Images/C-3/Manajemen-Konsol.png>
 File: Images/C-3/desainui.png Graphic file (type bmp)
 <Images/C-3/desainui.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23])
-(./chapters/4-Implementasi.tex [24]
+ [23]) (./chapters/4-Implementasi.tex [24]
 BAB IV.
 [25
 
@@ -1699,27 +1698,32 @@ Overfull \hbox (3.11319pt too wide) in alignment at lines 179--180
  []
 
 
-Overfull \hbox (3.11319pt too wide) in alignment at lines 180--188
+Overfull \hbox (3.11319pt too wide) in alignment at lines 180--187
  [] [] [] [] 
  []
 
 [31]
-Overfull \hbox (4.92569pt too wide) in paragraph at lines 198--198
+Overfull \hbox (4.92569pt too wide) in paragraph at lines 197--197
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
 
 
-Overfull \hbox (0.17969pt too wide) in alignment at lines 194--199
+Overfull \hbox (0.17969pt too wide) in alignment at lines 193--198
  [] [] [] [] 
  []
 
 
-Overfull \hbox (4.92569pt too wide) in paragraph at lines 202--202
+Overfull \hbox (4.92569pt too wide) in paragraph at lines 201--201
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
 
 
-Overfull \hbox (0.17969pt too wide) in alignment at lines 199--203
+Overfull \hbox (0.17969pt too wide) in alignment at lines 198--202
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (0.17969pt too wide) in alignment at lines 202--203
  [] [] [] [] 
  []
 
@@ -1729,12 +1733,7 @@ Overfull \hbox (0.17969pt too wide) in alignment at lines 203--204
  []
 
 
-Overfull \hbox (0.17969pt too wide) in alignment at lines 204--205
- [] [] [] [] 
- []
-
-
-Overfull \hbox (0.17969pt too wide) in alignment at lines 205--213
+Overfull \hbox (0.17969pt too wide) in alignment at lines 204--212
  [] [] [] [] 
  []
 
@@ -1788,109 +1787,109 @@ File: Images/C-5/Lingkungan-uji-coba.png Graphic file (type bmp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [35]
-[36]
-Overfull \hbox (4.92569pt too wide) in paragraph at lines 54--54
+[36] [37]
+Overfull \hbox (4.92569pt too wide) in paragraph at lines 63--63
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
 
 
-Overfull \hbox (8.97124pt too wide) in alignment at lines 50--55
+Overfull \hbox (8.97124pt too wide) in alignment at lines 59--64
  [] [] [] [] 
  []
 
 
-Overfull \hbox (4.92569pt too wide) in paragraph at lines 58--58
+Overfull \hbox (4.92569pt too wide) in paragraph at lines 67--67
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
 
 
-Overfull \hbox (8.97124pt too wide) in alignment at lines 55--59
+Overfull \hbox (8.97124pt too wide) in alignment at lines 64--68
  [] [] [] [] 
  []
 
 
-Overfull \hbox (8.97124pt too wide) in alignment at lines 59--60
+Overfull \hbox (8.97124pt too wide) in alignment at lines 68--69
  [] [] [] [] 
  []
 
 
-Overfull \hbox (8.97124pt too wide) in alignment at lines 60--61
+Overfull \hbox (8.97124pt too wide) in alignment at lines 69--70
  [] [] [] [] 
  []
 
 
-Overfull \hbox (3.5636pt too wide) in paragraph at lines 65--65
+Overfull \hbox (3.5636pt too wide) in paragraph at lines 74--74
 []|$[][][][][][][][][][][] []
  []
 
 
-Overfull \hbox (3.5636pt too wide) in paragraph at lines 65--65
+Overfull \hbox (3.5636pt too wide) in paragraph at lines 74--74
 [][][][][][][][][][][][]$| 
  []
 
 
-Overfull \hbox (3.5636pt too wide) in paragraph at lines 66--66
+Overfull \hbox (3.5636pt too wide) in paragraph at lines 75--75
 []|$[][][][][][][][][][][] []
  []
 
 
-Overfull \hbox (3.5636pt too wide) in paragraph at lines 66--66
+Overfull \hbox (3.5636pt too wide) in paragraph at lines 75--75
 [][][][][][][][][][][][]$| 
  []
 
 
-Overfull \hbox (8.97124pt too wide) in alignment at lines 61--68
+Overfull \hbox (8.97124pt too wide) in alignment at lines 70--77
  [] [] [] [] 
  []
 
-[37] [38] [39] [40]
-Overfull \hbox (4.92569pt too wide) in paragraph at lines 106--106
+[38] [39] [40]
+Overfull \hbox (4.92569pt too wide) in paragraph at lines 108--108
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
 
 
-Overfull \hbox (4.92569pt too wide) in paragraph at lines 110--110
+Overfull \hbox (4.92569pt too wide) in paragraph at lines 112--112
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
 
 
-Overfull \hbox (3.5636pt too wide) in paragraph at lines 116--116
-[]|$[][][][][][][][][][][] []
- []
-
-
-Overfull \hbox (3.5636pt too wide) in paragraph at lines 116--116
-[][][][][][][][][][][][]$| 
- []
-
-
-Overfull \hbox (3.5636pt too wide) in paragraph at lines 117--117
-[]|$[][][][][][][][][][][] []
- []
-
-
-Overfull \hbox (3.5636pt too wide) in paragraph at lines 117--117
-[][][][][][][][][][][][]$| 
- []
-
-[41]
 Overfull \hbox (4.92569pt too wide) in paragraph at lines 128--128
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
 
 
-Overfull \hbox (4.92569pt too wide) in paragraph at lines 132--132
-[]|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
- []
-
-[42]
-Overfull \hbox (4.92569pt too wide) in paragraph at lines 148--148
-[]|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
- []
-
-
-Overfull \hbox (32.41684pt too wide) in alignment at lines 144--149
+Overfull \hbox (29.48782pt too wide) in alignment at lines 124--129
  [] [] [] [] 
+ []
+
+
+Overfull \hbox (4.92569pt too wide) in paragraph at lines 131--131
+[]|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
+ []
+
+
+Overfull \hbox (29.48782pt too wide) in alignment at lines 129--132
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (29.48782pt too wide) in alignment at lines 132--133
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (29.48782pt too wide) in alignment at lines 133--134
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (29.48782pt too wide) in alignment at lines 134--138
+ [] [] [] [] 
+ []
+
+[41]
+Overfull \hbox (4.92569pt too wide) in paragraph at lines 147--147
+[]|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
 
 
@@ -1899,154 +1898,150 @@ Overfull \hbox (4.92569pt too wide) in paragraph at lines 151--151
  []
 
 
-Overfull \hbox (32.41684pt too wide) in alignment at lines 149--152
- [] [] [] [] 
+Overfull \hbox (3.5636pt too wide) in paragraph at lines 157--157
+[]|$[][][][][][][][][][][] []
  []
 
 
-Overfull \hbox (32.41684pt too wide) in alignment at lines 152--153
- [] [] [] [] 
+Overfull \hbox (3.5636pt too wide) in paragraph at lines 157--157
+[][][][][][][][][][][][]$| 
  []
 
 
-Overfull \hbox (32.41684pt too wide) in alignment at lines 153--154
- [] [] [] [] 
+Overfull \hbox (3.5636pt too wide) in paragraph at lines 158--158
+[]|$[][][][][][][][][][][] []
  []
 
 
-Overfull \hbox (32.41684pt too wide) in alignment at lines 154--158
- [] [] [] [] 
+Overfull \hbox (3.5636pt too wide) in paragraph at lines 158--158
+[][][][][][][][][][][][]$| 
  []
 
-
-Overfull \hbox (4.92569pt too wide) in paragraph at lines 166--166
+[42]
+Overfull \hbox (4.92569pt too wide) in paragraph at lines 170--170
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
 
 
-Overfull \hbox (29.48782pt too wide) in alignment at lines 162--167
+Overfull \hbox (32.41684pt too wide) in alignment at lines 166--171
  [] [] [] [] 
  []
 
 
-Overfull \hbox (4.92569pt too wide) in paragraph at lines 169--169
+Overfull \hbox (4.92569pt too wide) in paragraph at lines 173--173
 []|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
  []
 
 
-Overfull \hbox (29.48782pt too wide) in alignment at lines 167--170
+Overfull \hbox (32.41684pt too wide) in alignment at lines 171--174
  [] [] [] [] 
  []
 
 
-Overfull \hbox (29.48782pt too wide) in alignment at lines 170--171
+Overfull \hbox (32.41684pt too wide) in alignment at lines 174--175
  [] [] [] [] 
  []
 
 
-Overfull \hbox (29.48782pt too wide) in alignment at lines 171--172
+Overfull \hbox (32.41684pt too wide) in alignment at lines 175--176
  [] [] [] [] 
  []
 
 
-Overfull \hbox (29.48782pt too wide) in alignment at lines 172--176
+Overfull \hbox (32.41684pt too wide) in alignment at lines 176--180
  [] [] [] [] 
  []
 
-[43]
-Overfull \hbox (4.92569pt too wide) in paragraph at lines 186--186
-[]|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
- []
-
-
-Overfull \hbox (14.83376pt too wide) in alignment at lines 182--187
- [] [] [] [] 
- []
-
-
-Overfull \hbox (4.92569pt too wide) in paragraph at lines 189--189
-[]|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
- []
-
-
-Overfull \hbox (14.83376pt too wide) in alignment at lines 187--190
- [] [] [] [] 
- []
-
-
-Overfull \hbox (14.83376pt too wide) in alignment at lines 190--191
- [] [] [] [] 
- []
-
-
-Overfull \hbox (14.83376pt too wide) in alignment at lines 191--192
- [] [] [] [] 
- []
-
-
-Overfull \hbox (14.83376pt too wide) in alignment at lines 192--196
- [] [] [] [] 
- []
-
-[44]
-File: Images/C-5/Penggunaan-Storage.png Graphic file (type bmp)
-<Images/C-5/Penggunaan-Storage.png>
-File: Images/C-5/Rata-rata-Ukuran-Perubahan.png Graphic file (type bmp)
-<Images/C-5/Rata-rata-Ukuran-Perubahan.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45]
+ [43]
+Overfull \hbox (4.92569pt too wide) in paragraph at lines 191--191
+[]|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
+ []
+
+
+Overfull \hbox (14.83376pt too wide) in alignment at lines 187--192
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (4.92569pt too wide) in paragraph at lines 194--194
+[]|\TU/TimesNewRoman(0)/bx/n/10.95 No| 
+ []
+
+
+Overfull \hbox (14.83376pt too wide) in alignment at lines 192--195
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.83376pt too wide) in alignment at lines 195--196
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.83376pt too wide) in alignment at lines 196--197
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.83376pt too wide) in alignment at lines 197--201
+ [] [] [] [] 
+ []
+
+File: Images/C-5/Penggunaan-Storage.png Graphic file (type bmp)
+<Images/C-5/Penggunaan-Storage.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44]
 File: Images/C-5/Response-Time.png Graphic file (type bmp)
 <Images/C-5/Response-Time.png>
 
-[46]) (./chapters/6-Penutup.tex [47] [48
-
-]
+[45]) (./chapters/6-Penutup.tex [46]
 BAB VI.
+[47
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+]) (./main.bbl [48] [49
 
- [49])
-(./main.bbl [50] [51
-
-]) (./chapters/7-Lampiran_A.tex [52]
+]) (./chapters/7-Lampiran_A.tex [50]
 Lampiran A.
+[51
+
+]) (./chapters/8-Lampiran_B.tex [52]
+Lampiran B.
 [53
 
-]) (./chapters/8-Lampiran_B.tex [54]
-Lampiran B.
-[55
-
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [56]
-[57]
+ [54]
+[55]
 Underfull \vbox (badness 2503) has occurred while \output is active []
+
+ [56]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [58]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [59]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [60]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [61]
 Overfull \hbox (69.89116pt too wide) in paragraph at lines 230--231
 [][] 
  []
 
-[62]
+[60]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63]
+ [61]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64])
-[65] [66
+ [62])
+[63] [64
 
 ]
 File: Images/fotoDiri.png Graphic file (type bmp)
@@ -2057,7 +2052,7 @@ Overfull \hbox (3.56015pt too wide) in paragraph at lines 59--60
  []
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 64.
-[67
+[65
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
@@ -2070,12 +2065,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 26222 strings out of 493007
- 476885 string characters out of 6136719
- 716064 words of memory out of 5000000
- 29822 multiletter control sequences out of 15000+600000
+ 26218 strings out of 493007
+ 476743 string characters out of 6136719
+ 715985 words of memory out of 5000000
+ 29819 multiletter control sequences out of 15000+600000
  534325 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  46i,12n,67p,10439b,1793s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (91 pages).
+Output written on main.pdf (89 pages).

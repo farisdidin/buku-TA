@@ -5,20 +5,23 @@
         Dari proses perencangan, implementasi dan pengujian terhadap sistem, dapat diambil beberapa kesimpulan berikut:
 		\begin{enumerate}
 			\item Sistem dapat menyimpan konfigurasi perangkat jaringan di dalam direktori yang dibedakan berdasarkan nama perangkat jaringan yang sudah ditentukan.
+			\item Sistem dapat menyimpan perubahan konfigurasi perangkat jaringan dalam bentuk versi menggunakan \textit{versioning} git.
 			\item Sistem dapat menerima konfigurasi yang dikirim dari perangkat jaringan melalui protokol FTP, TFTP, dan SCP menyesuaikan protokol yang didukung perangkat jaringan.
-            \item Kebutuhan storage untuk menyimpan linier dengan jumlah perubahan yang dilakukan.
-            \item Sistem mengecek perubahan konfigurasi yang disimpan di dalam repositori menggunakan modul \textit{python wathdog}.
-            \item Sistem dapat digunakan untuk merubah versi konfigurasi yang disimpan.
-            \item Konfigurasi yang disimpan dalam sistem dapat diunduh kembali oleh perangkat jaringan setelah versinya dirubah.
-            \item Sistem dapat digunakan untuk melihat perbedaan versi satu dengan yang lainnya.
-            \item Waktu yang dieperlukan untuk memindah versi bergantung kepada jumlah perubahan yang disimpan.
+       		\item Konfigurasi yang disimpan dalam sistem dapat diunduh kembali oleh perangkat jaringan setelah versi dirubah.
+            \item Sistem dapat menjalankan fungsionalitas antara lain :
+            	\begin{itemize}
+            		\item Menambah dan menghapus repositori untuk perangkat jaringan.
+            		\item Melihat daftar perubahan.
+            		\item Merubah versi konfigurasi.
+            	\end{itemize}
+            \item Waktu yang diperlukan untuk memindah versi bergantung kepada jumlah perubahan yang disimpan.
 		\end{enumerate}
         
 	\section{Saran}
 		Berikut beberapa saran yang diberikan untuk pengembangan lebih lanjut:
 		\begin{enumerate}
 			\item Path atau url untuk mengunduh konfigurasi dijadikan sama dengan path untuk mengunggah konfigurasi.
-			\item Ditambahkan fitur untuk melihat struktur tree dari catatan commit sehingga memudahkan melihat daftar perubahan ketika repositori memiliki cabang lebih dari satu.
+			\item Ditambahkan fitur untuk melihat struktur tree dari catatan commit agar memudahkan melihat daftar perubahan ketika repositori memiliki cabang lebih dari satu.
 			\item Melakukan optimasi waktu yang diperlukan untuk merubah versi konfigurasi yang disimpan.
 			\item Manajemen konsol yang menggunakan satu macam tampilan.
 		\end{enumerate}
